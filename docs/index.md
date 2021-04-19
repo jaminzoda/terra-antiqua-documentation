@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## Welcome to Terra Antiqua documentation page!
 
-You can use the [editor on GitHub](https://github.com/jaminzoda/terra-antiqua-documentation/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Terra Antiqua is a plugin for the QGIS software  that allows reconstruction of global, regional and local  paleogeographic maps. These paleogeographic maps then can be used, in the form of Digital Elevation Models (DEM) or symbolized raster images, as boundary conditions in climate models or for visualization of various geological information in its paleocoordinates. Terra Antiqua has an intutive graphical user interface that simplifies the usage of the plugin. It provides a complete set of tools to edit DEMs for paleoreconstructions, and offers robust algorithms geared to manipulate geographic features and raster grids generating maps for different time slices.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The workflow is intuitive, and the user is provided with guiding tips for each algorithm and tool. Terra Antiqua takes as an input rotated (e.g., in Gplates) present-day topography and bathymetry (e.g.: Müller et al., 2008) alongside vector masks that are used to define the continental blocks.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jaminzoda/terra-antiqua-documentation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
