@@ -7,3 +7,12 @@ The workflow is intuitive, and the user is provided with guiding tips for each a
 A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
 
 ### Terra Antiqua comprises two group of tools, namely primary tools and secondary tools.
+
+### Full documentation is coming soon.
+
+### Download.
+A zip version of the plugin can be downloaded here :
+https://github.com/jaminzoda/terra-antiqua-documentation/terra_antiqua_v0.5.zip
+### Installation.
+To install the plugin follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins ... -> Istall
+fomr zip - > Browse -> select the zip file -> Install plugin.
