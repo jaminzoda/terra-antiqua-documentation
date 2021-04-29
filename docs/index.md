@@ -11,7 +11,7 @@ A user's manual is available where we detail each of Terra Antiqua’s tools, it
 ### Full documentation is coming soon.
 
 ### Download.
-A zip version of the plugin can be downloaded [here](blob/main/terra_antiqua_v0.5.zip)
+A zip version of the plugin can be downloaded [here](../blob/main/terra_antiqua_v0.5.zip)
 ### Installation.
 To install the plugin follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins ... -> Install
 from zip - > Browse -> select the zip file -> Install plugin.
