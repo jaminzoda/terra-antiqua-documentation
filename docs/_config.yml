@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 show_downloads: true
+github:
+  zip_url: https://github.com/jaminzoda/terra-antiqua-documentation/terra_antiqua_v0.5.zip
