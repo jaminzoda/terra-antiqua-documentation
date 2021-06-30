@@ -8,12 +8,12 @@ A user's manual is available where we detail each of Terra Antiqua’s tools, it
 ### Full documentation is coming soon.
 
 ### Download.
-Terra Antiqua is available in QGIS oficial respository. Follow the instructions below for the installation (recommended).
+Terra Antiqua is available in QGIS oficial respository. Follow the instructions below for the installation **(recommended)**.
 
 Alternatively, a zip version of the plugin can be downloaded [here](https://github.com/jaminzoda/terra-antiqua-documentation/blob/dcd3e249dc2265eaaa7325d0e60017dd40ce28af/terra_antiqua_v1.0.zip)
 
 ### Installation.
-To install the plugin from the official repositoy (recommended) follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
+To install the plugin from the official repositoy **(recommended)** follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
 
 To install the plugin from the zip file, follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins … -> Install from zip - > Browse -> select the zip file -> Install plugin.
 
