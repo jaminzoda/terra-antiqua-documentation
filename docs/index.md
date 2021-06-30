@@ -1,18 +1,20 @@
 ## Welcome to Terra Antiqua documentation page!
-
-Terra Antiqua is a plugin for the QGIS software  that allows reconstruction of global, regional and local  paleogeographic maps. These paleogeographic maps then can be used, in the form of Digital Elevation Models (DEM) or symbolized raster images, as boundary conditions in climate models or for visualization of various geological information in its paleocoordinates. Terra Antiqua has an intuitive graphical user interface that simplifies the usage of the plugin. It provides a complete set of tools to edit DEMs for paleoreconstructions, and offers robust algorithms geared to manipulate geographic features and raster grids generating maps for different time slices.
-
-The workflow is intuitive, and the user is provided with guiding tips for each algorithm and tool. Terra Antiqua takes as an input rotated (e.g., in Gplates) present-day topography and bathymetry (e.g.: Müller et al., 2008) alongside vector masks that are used to define the continental blocks.
+# [Download the User's Manual here (pdf)](https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing)
+Terra Antiqua is a plugin for the QGIS software  that allows reconstruction of global, regional and local  paleogeographic maps. These paleogeographic maps then can be used, in the form of Digital Elevation Models (DEM) or symbolized raster images, as boundary conditions in climate models or for visualization of various geological information in its paleocoordinates. 
 
 A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
 
-### Terra Antiqua comprises two group of tools, namely primary tools and secondary tools.
 
 ### Full documentation is coming soon.
 
 ### Download.
-A zip version of the plugin can be downloaded [here](https://github.com/jaminzoda/terra-antiqua-documentation/blob/main/terra_antiqua_v0.5.zip)
+Terra Antiqua is available in QGIS oficial respository. Follow the instructions below for the installation (recommended).
+
+Alternatively, a zip version of the plugin can be downloaded [here](https://github.com/jaminzoda/terra-antiqua-documentation/blob/dcd3e249dc2265eaaa7325d0e60017dd40ce28af/terra_antiqua_v1.0.zip)
+
 ### Installation.
-To install the plugin follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins ... -> Install
-from zip - > Browse -> select the zip file -> Install plugin.
-### Contact e-mail: terraantiqua.qgis@gmail.com
+To install the plugin from the official repositoy (recommended) follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
+
+To install the plugin from the zip file, follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins … -> Install from zip - > Browse -> select the zip file -> Install plugin.
+
+### Contact e-mail: [terraantiqua.qgis@gmail.com]
