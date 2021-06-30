@@ -15,3 +15,4 @@ A zip version of the plugin can be downloaded [here](https://github.com/jaminzod
 ### Installation.
 To install the plugin follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins ... -> Install
 from zip - > Browse -> select the zip file -> Install plugin.
+### Contact e-mail: terraantiqua.qgis@gmail.com
