@@ -17,4 +17,8 @@ To install the plugin from the official repositoy **(recommended)** follow these
 
 To install the plugin from the zip file, follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins … -> Install from zip - > Browse -> select the zip file -> Install plugin.
 
-### Contact e-mail: [terraantiqua.qgis@gmail.com]
+### Sample data
+[Here](https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing) you can download the sample data bundle for Terra Antiqua. This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the [User's Manual](https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing)
+### Please download the whole folder "TA_sample_data_bundle" as it is.
+
+### Contact e-mail: terraantiqua.qgis@gmail.com
