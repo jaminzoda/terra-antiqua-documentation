@@ -12,6 +12,7 @@ A user's manual is available where we detail each of Terra Antiqua’s tools, it
 Alternatively, a zip version of the plugin can be downloaded [here](https://github.com/jaminzoda/terra-antiqua-documentation/blob/2b497d3ed4010c5b388657191bfba1f79e081185/terra_antiqua_v1.0.1.zip).
 To install the plugin from the zip file, follow these steps: Open QGIS main window -> Plugins -> Manahe and install plugins … -> Install from zip - > Browse -> select the zip file -> Install plugin.
 
+[Link to QGIS download page](https://qgis.org/en/site/forusers/download.html)
 
 ## Sample data
 [Here](https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing) you can download the sample data bundle for Terra Antiqua. This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the [User's Manual](https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing)
