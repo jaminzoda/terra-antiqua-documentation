@@ -1,5 +1,9 @@
 ## Welcome to Terra Antiqua documentation page!
 # [Download the User's Manual here (pdf)](https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing)
+Watch these short videos to see Terra Antiqua in action!
+
+[Demo video #1](https://youtu.be/wj9B-YlCN5w) and [Demo video #2](https://youtu.be/5F7YaDT3LJ0)
+
 Terra Antiqua is a plugin for the QGIS software  that allows reconstruction of global, regional and local  paleogeographic maps. These paleogeographic maps then can be used, in the form of Digital Elevation Models (DEM) or symbolized raster images, as boundary conditions in climate models or for visualization of various geological information in its paleocoordinates. 
 
 A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
