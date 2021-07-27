@@ -1,0 +1,155 @@
+---
+layout: tool
+title: Isostatic Compensation
+icon: /assets/images/icon_std_proc.png
+working: false
+---
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+    </head>
+    <title> Isostatic compensation </title>
+    
+    <body>
+        <p>
+        The poles' topography depends on the presence, extent, and thickness of ice sheets and their associated isostatic effects. If the reconstruction corresponds to a warmer period, one must isostatically compensate for the ice loss on Greenland or Antarctica.
+        This tool compensates for the absence of ice mass in the poles. The DEM values will be modified in the areas where there is a noticeable difference between ice and bedrock topography. The percentage of ice to be removed from the polar regions must be defined. The higher it is, the stronger the isostatic rebound, and the higher the resulting topography will be.</p>
+        <div class="technical-details">
+        <p>This tool uses present-day ice and bedrock topography to calculate the thickness of present-day ice covering Antarctica and Greenland. The thickness is determined by subtracting the bedrock topography from ice topography. Then that topography is raised by ⅓ of the current ice thickness if all the ice is removed. If only part of the ice is to be removed, the following formula applies:<br>
+        
+    
+        <i>Hc = Hi+0.3*Hd*Ir</i>
+        <br>
+            Where:<br/>
+        <i>Hc</i> - Compensated elevation (new elevation value) <br/>
+        <i>Hi</i> - Initial elevation<br/>
+        <i>Hd</i> - Elevation difference between the bedrock and ice topographies (ice thickness)<br/>
+        <i>Ir</i> - Removed amount of ice (in %)
+        </p>
+        </div>
+       
+       <h2>Step-by-step</h2>
+
+           <ol>
+               <li> <p> Click on the icon <div2 class="icon-container">
+                   <img class="tool-icon" src="/assets/images/icon_std_proc.png"
+                   alt="Icon Set Paleoshorelines"></div2>. The Standard Processing window will pop up.</p></li>
+                  
+               <li><p> In the field <b><i>How would you like to process the input DEM</i></b>, choose <b><i>Isostatic Compensation</i></b>.</p>
+                   <div2 class= "icon-container">
+                   <img src="/assets/images/GUI_isostat_cp.png"
+                   alt="GUI_Isostatic Compensation"></div2></li>
+
+ 
+
+                <li><p> In <b><i>Raster to be modified</i></b>, choose the bedrock topography DEM (rotated to the time of reconstruction).</p>
+                    </li>
+
+                <li><p>In <i><b>Ice topography raster</b></i>, choose the ice topography DEM (rotated to the time of reconstruction).</p></li>
+                <li><p>Enter the percentage of ice that is removed from the poles to calculate the isostatic rebound. The higher this percentage, the stronger the rebound, and the higher the resulting bedrock topography.</p></li>
+                <p><br></p>
+<h3 style="text-align:center"><b>Advanced Parameters</b></h3>
+                <li><p>
+                    If you don’t want this tool to work in the entire map, you have the option to constrain the isostatic compensation to particular regions. You need to select a <b><i>Mask layer</b></i>. If you don’t want to use all polygons in the <b><i>Mask layer</b></i>, there are two ways to choose which ones to use.</p>
+                    <ul><li><p>You may select the polygons you want the compensation to be constrained to on the map canvas. In this case, check the box <i><b>Selected features only</b></i>.</p></li>
+                        <li>
+                            <p>If the regions you want to limit the compensation to are Greenland and Antarctica, you don’t need to select manually the tectonic plates. You can check the box <i><b>Get polar regions automatically</b></i>. In this case, the tool will search for the names of polar continental plates automatically and use only these for the isostatic compensation. Make sure your shapefile has an attribute field called <b>NAME</b> with the names of the tectonic plates.</p>
+    
+                            <div class="tip"> <div1 class= "icon-container">
+                                <img class="warning-tip-icon" src="/assets/images/icon_tip.png" alt="recommendation">
+                                    <p>This second option is designed to be used with the continental blocks’ shapefile. It is important that the <b>NAME</b> attribute field is present. </p></div>
+    
+                            <div class="tip">
+                                <p>The table below shows the names of polar tectonic plates the algorithm recognizes. Every plate whose name contains any of the words listed in the left column will be used for the isostatic compensation (case insensitive). The column on the right shows the most common spelling for those plate names.</p>
+                            </div>
+                            
+                            
+                                <div class="panel">
+                                    <div class="panel-heading" data-toggle="1">
+                                       <b><a data-toggle="1">Click here to open the table</a></b>
+                                        
+                                    </div>
+                                    <div class="panel-body hidden-element" data-body="1">
+                                        
+                                  
+                           
+                            
+                                <table>
+                                    <tr>
+                                        <th><p>Words recognized by the algorithm</p></th>
+                                        <th><p>Most common names</p></th>
+                                     </tr>
+               
+                                   <tr>
+                                       <td><p>greenland</p></th>
+                                       <td><p>Greenland</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>antarctic / antarctica / eastantarctic / eastantarctica</p></th>
+                                       <td><p>Antarctic Peninsula / East Antarctica / East Antarctic Craton</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>whitmore</p></th>
+                                       <td><p>Whitmore Mountains</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>luetzow / lutzow</p></th>
+                                       <td><p>Lützow-Holm Bay</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>ross</p></th>
+                                       <td><p>Ross Terrane</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>haag</p></th>
+                                       <td><p>Haag Mountains or Nunataks</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>maud</p></th>
+                                       <td><p>Queen Maud Land / Dronning Maud Land</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>byrd</p></th>
+                                       <td><p>Marie Byrd Land</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>ellsworth</p></th>
+                                       <td><p>Ellsworth Mountains</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>filchner</p></th>
+                                       <td><p>Filchner Block</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>raynor</p></th>
+                                       <td><p>Raynor Province</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>rone ice</p></th>
+                                       <td><p>Rone Ice Shelf</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>thurston</p></th>
+                                       <td><p>Thurston Island</p></th>
+                                    </tr>
+                                   <tr>
+                                       <td><p>amundsen</p></th>
+                                       <td><p>Amundsen Terrane</p></th>
+                                    </tr>
+                                </table>
+                                
+                                    </div>
+                                </div>
+                            
+                        </li></ul></li>
+               
+                <p><br></p>
+                <li> Choose the <b><i>Output file path</b></i>, and click Run.</li>
+           </ol>
+           <script src="/assets/js/collapse.js"></script>
+</body>
+    </html>
+<!-- Copyright (C) 2021 by Jovid Aminov, Diego Ruiz, Guillaume Dupont-Nivet
+ Terra Antiqua is a plugin for the software QGis that deals with the reconstruction of paleogeography.
+Full copyright notice in file: terra_antiqua.py -->
