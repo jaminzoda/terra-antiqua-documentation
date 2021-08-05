@@ -2,7 +2,7 @@
 layout: tool
 title: Create Topo-/Bathymetry
 icon: /assets/images/icon_create_tb.png
-working: true
+working: false
 ---
 <html>
 <head>
@@ -20,21 +20,27 @@ working: true
            </div>
            <div class="technical-details">
 
-<ul><li><p>Create randomly positioned points within the polygon</p></li>
+<ol><li><p>Create randomly positioned points within the polygon</p></li>
 <li><p>Assign elevation values to these random points. The maximum depth (maximum elevation for mountains) is assigned to points that are furthest from the edge of the polygon and the minimum to pixels closest to the edge.</p></li>
-<li><p>The  continental slope/shelf width defines the elevation/depth gradient that will change the geometry of the feature. For example on mountains a narrow slope on a broad mountain range will generate a plateau-like feature. For marine basins, a shelf-like geometry is created by having another parameter defining the shelf maximum depth. A shallow slope on the shelf itself is formed followed by a sharp drop from the shelf to the deeper basin that quickly reaches maximum depth towards the center of the basin. Adjusting the shelf and slope widths also affects the deeper geometry of the basin as shown in the examples below.</p></li>
-<li><p>For the sea, the shelf zone is created using maximum shelf depth and shelf width parameters. The shelf’s depth values are interpolated between the maximum shelf depth provided by the user and the elevation of surrounding pixels.</p></li>
+<li><p>The slope/shelf width defines the elevation/depth gradient that will change the geometry of the feature. For example on mountains a narrow slope on a broad mountain range will generate a plateau-like feature. For marine basins, a shelf-like geometry is created by having another parameter defining the shelf maximum depth. A shallow slope on the shelf itself is formed followed by a sharp drop from the shelf to the deeper basin that quickly reaches maximum depth towards the center of the basin. Adjusting the shelf and slope widths also affects the deeper geometry of the basin as shown in the examples below.</p></li>
+<!--<li><p>For the sea, the shelf zone is created using maximum shelf depth and shelf width parameters. The shelf’s depth values are interpolated between the maximum shelf depth provided by the user and the elevation of surrounding pixels.</p></li>-->
 <li><p>Finally, the entire area of the feature is interpolated to create a continuous elevation/depth values pattern.</p></li>
-</ul>
+</ol>
     </div>
 <p>Most features made with this tool (such as inland seas and mountain ranges) will be closed/symmetrical (e.g.: an inland sea will be completely encircled with a shoreline) because the algorithm treats each pixel at the edge of the polygon equally.
-<p>For mountains, in the case that the maximum elevation entered by the user is below the preexisting topography, this higher preexisting topography will remain untouched so that mountainous features can be kept for a realistic result. However, if you want to completely create new topography, you should enter a maximum higher than the preexisting maximum. If you want to keep elevation lower, you can also first remove the preexisting topography with the use of the <a>Remove artefacts tool</a>. Alternatively you can first use <a>Mdify TB</a> before applying <b>Create TB(icon)</b>.
+<p>For mountains, in the case that the maximum elevation entered by the user is below the preexisting topography, this higher preexisting topography will remain untouched so that mountainous features can be kept for a realistic result. However, if you want to completely create new topography, you should enter a maximum higher than the preexisting maximum. If you want to keep elevation lower, you can also first remove the preexisting topography with the use of the <a href="remove_arts.html">Remove Artefacts<img src="/assets/images/icon_remove_arts.png" alt="icon_remove artefacts" width="3%"/></a>. Alternatively you can first use <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="3%"/></a> before applying <a href="create_tb.html">Create Topo- /Bathymetry</a>.
 
-<p>For marine basins, the same applies keeping preexisting depths that are deeper than the maximum set depth. It you do not want to keep preexisting depths, they can be initially deleted with the <a>Remove artefacts tool  </a> or by setting values to H=0 using the Modify <a>topography/bathymetry</a>.
-<p>In addition, a special feature has been implemented to enable connecting to preexisting oceans and seas. The created marine basin will most often connect to a preexisting ocean or sea. In this case the algorithm checks if the raster beneath the polygon of the marine area being created has bathymetry values (<b>H negative</b>). If it has, the initial value of the overlapping areas connecting the 2 basins will be used and the new marine areas will be adjusted accordingly.</p>
+<p>For marine basins, the same applies keeping preexisting depths that are deeper than the maximum set depth. It you do not want to keep preexisting depths, they can be initially deleted with the tool<a href="remove_arts.html">Remove Artefacts<img src="/assets/images/icon_remove_arts.png" alt="icon_remove artefacts" width="3%"/></a> or by setting values to H=0 using the tool <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="3%"/></a>.
+<p>In addition, a special feature has been implemented to enable connecting to preexisting oceans and seas. The created marine basin will most often connect to a preexisting ocean or sea. In this case the algorithm checks if the raster beneath the polygon of the marine area being created has bathymetry values (H &lt 0). If it has, the initial value of the overlapping areas connecting the 2 basins will be used and the new marine areas will be adjusted accordingly.</p>
 
-<b>EXAMPLE PICTURES</b>
+<b>Examples:</b>
+<p><br></p>
 
+<img src="/assets/images/Create_tb_example1.png" width="50%" alt="Create Topo- /Bathyemtry example" class= "center">
+<img src="/assets/images/Create_tb_example2.png" width="50%" alt="Create Topo- /Bathyemtry example" class= "center">
+<img src="/assets/images/Create_tb_example3.png" width="50%" alt="Create Topo- /Bathyemtry example" class= "center">
+    
+    
 <!--
         
         
@@ -73,7 +79,7 @@ working: true
                   <div1 class= "icon-container">
                       <img class="warning-tip-icon" src="/assets/images/icon_tip.png"
                       alt="recommendation"><p> Even if this tool works at any step of the reconstruction, it may be better to use it after modifying the topography and the bathymetry, in order to preserve as much as possible the complexity of the initial topography.
-                      <i>Create Topo/Bathymetry</i> removes the original data to create a completely new artificially-generated topography that looks less realistic that real topography processed with the tool <a>Modify Topo-/Bathymetry</a>.</p></div>
+                      <i>Create Topo/Bathymetry</i> removes the original data to create a completely new artificially-generated topography that looks less realistic that real topography processed with the tool <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="3%"/></a>.</p></div>
                <p><br></p>
                
                <li><p> Choose the shapefile containing the masks for the new features to be created. If you do not want to use all the polygons, check the box to use only the selected features. For this you need to select polygons on the QGIS map canvas.</p></li>
@@ -89,7 +95,9 @@ working: true
                
                <p><br></p>
                <div class="note"><p>
-               To retrieve data (minimum elevation, maximum elevation, etc.) from the attribute table of the shapefile use this button <b>BUTTON PICTURE</b>then select <i>field type</i> and finally choose the corresponding attribute field from the list.</div>
+               To retrieve data (minimum elevation, maximum elevation, etc.) from the attribute table of the shapefile use this button <div2 class= "icon-container" >
+                   <img style="width:4%" src="/assets/images/property_override_button.png"
+                   alt="icon_parameter_from_attribute_table"></div2> then select <i>field type</i> and finally choose the corresponding attribute field from the list.</div>
                <p><br></p>
                 <li>
                <p> Choose the <b><i>Output file path</b></i>, and click Run.</li>

@@ -67,6 +67,7 @@ Terra Antiqua v1.0.1 has been tested on (we thus recommend these versions or hig
 
 ---
 ## Installation
-To install the plugin follow these steps: Open QGIS main window --> Plugins --> Manage and install plugins … --> All --> Search for <i>Terra Antiqua</i> --> Install plugin.
-
-
+To install the plugin follow these steps: Open QGIS main window --> Plugins --> Manage and install plugins (see screenshot below) … --> All --> Search for <i>Terra Antiqua</i> --> Install plugin.
+<p>
+<img src="/assets/images/install_plugins.png" alt="Screenshot_QGIS_plugin repository">
+</p>
