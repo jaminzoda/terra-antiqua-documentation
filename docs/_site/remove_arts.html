@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+    </head>
+    <title> Removing artefacts </title>
+    
+    <body>
+        <p>Artefacts can be inherited from the input data sources or introduced to the map during the raster processing within the framework of Terra Antiqua. For example, filling gaps by interpolation can cause some abnormally high or low values that need to be removed.
+        <p>Remove Artefacts is designed to remove the artefacts present in the data or introduced during different processing steps from the DEM raster. A big advantage of this tool is that polygons are drawn by the user to specify the area where artefacts will be removed. If needed, more polygons can be drawn.
+        <div class="technical-details">
+            <p>This function is very similar to the tool <a href="fill_gaps.html">Fill gaps</a>. Like the primary tools, the drawn polygon is rasterized, and the raster mask is used to filter out the pixels containing artefacts. The difference is that Remove Artefacts does not need a shapefile with previously drawn polygons. Here the user is prompted to draw them on the spot, making the process faster but harder to replicate.
+      
+        <br>The user then defines in the dialog interface what is to be considered an artefact within those polygons (step 3). If the user writes "NoData"(case insensitive), the algorithm will not erase any value and only work on the empty pixels. A mathematical expression can also be entered to remove more specific values (for example H>2500 removes all points above 2500 m elevation).</p></div>
+       <p> After the artefacts are removed, the pixels may be kept empty or interpolated immediately (to be chosen by the user in the parameters window) if the user chooses to do so (step 4).</p>
+
+<!--
+        <p>This function is very similar to the tool Fill gaps (see part 3.2). The difference is that Remove Artefacts does not need a shapefile with previously drawn polygons. Here the user is prompted to draw them on the spot, making the process faster but harder to replicate.<br>
+        Like the primary tools, the drawn polygon is rasterized, and the raster mask is used to filter out the pixels containing artefacts. After the artefacts are removed, the pixels may be kept empty or interpolated immediately (to be chosen by the user in the parameters window). In the latter case, the interpolation is performed only for the gaps inside the drawn polygon.</p></div>
+        -->
+        <p><hr></p>
+        <h2>Step-by-step</h2>
+
+            <ol>
+                <li> <p> Click on the icon <div2 class="icon-container">
+                    <img class="tool-icon" src="/assets/images/icon_remove_arts.png"
+                    alt="Icon remove artefacts"></div2>. The tooltip window will pop up.</p>
+                    <img style="width:60%" src="/assets/images/tooltip_remove_arts.png" alt="tooltip">
+                    </li>
+                
+                   <li><p> Read the instructions, click OK and draw the first polygon. Right-click when you are done.</p>
+                       <div style="width:55%">
+                       <img src="/assets/images/remove_arts.png"
+                       alt="remove artefacts"></div>
+                   <div class= "note">
+                      <p> If you want to draw more than one polygon at a time, you will have the option in step 5. Keep in mind that all polygons will be treated equally, which means that the same formula will be used in all of them to find the artefacts to be removed.</p></div>
+                      </li>
+                   <li><p>In the parameters window you can enter the formula that will define which values are to be considered as artefacts. Follow the instruction from the text on the right of the window to enter the formula.</p>
+                       <div2 class= "icon-container">
+                       <img src="/assets/images/GUI_remove_arts.png"
+                       alt="remove artefacts"></div2>
+                       <p><br></p>
+
+                      <div class="note"> <p>You have two options in this tool. Either you remove the artefacts and leave a blank space for each removed pixel, or you can interpolate from adjacent values to fill those gaps. For the first option, skip step 4.</p></div>
+                      <p><br></p>
+
+                    </li>
+                   <li><p>Check the box to <i><b>Interpolate values for removed cells</b></i> to replace the artefacts with interpolated values.</p></li>
+                   <li><p>If you want to add more polygons, click <b><i>Add more polygons</i></b>. If not, skip this step.</p>
+                       <div style="width:55%">
+                       <img src="/assets/images/remove_arts2.png"
+                       alt="remove artefacts 2 polygons"></div>
+                       </li>
+                   
+                    <li>
+                   <p> Choose the <b><i>Output file path</b></i>, and click Run.</p></li></ol>
+            <div class="warning">
+                <div1 class= "icon-container">
+                    <img class="warning-tip-icon" src="/assets/images/icon_warning.png"
+                    alt="warning">
+                   <p> The polygons you draw here are temporary and will be erased once the processing is done.</p>
+            </div>
+            <div class="warning">
+                
+                   <p> When you are drawing the polygon(s), to deactivate the tool, click again on the icon <div2 class="icon-container">
+                       <img class="tool-icon" src="/assets/images/icon_remove_arts.png"
+                       alt="Icon remove artefacts"></div2>.</p>
+            </div>
+                   <p><br></p>
+            
+            <div class="warning">
+                <div1 class= "icon-container">
+                    <img class="warning-tip-icon" src="/assets/images/icon_warning.png"
+                    alt="warning">
+               <p> The formula must have a specific format. Make sure you follow the instructions from the text on the right part of the window. The algorithm recognizes all mathematical operators. For the full list see <a href= "https://numpy.org/doc/stable/reference/routines.math.html">numpy website</a>.</p>
+               </div>
+    </body>
+</html>
+
+<!-- Copyright (C) 2021 by Jovid Aminov, Diego Ruiz, Guillaume Dupont-Nivet
+ Terra Antiqua is a plugin for the software QGis that deals with the reconstruction of paleogeography.
+Full copyright notice in file: terra_antiqua.py -->
