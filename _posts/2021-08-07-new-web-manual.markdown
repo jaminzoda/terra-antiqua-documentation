@@ -11,3 +11,5 @@ Feel free to comment on anything and to give us feedback (on the manual or on th
 ### The sample data bundle is also to be downloaded from this website. It is available here: <a href="/sample_data.html">Sample data bundle</a>
 
 This has been correctly updated in the welcome pop-up message of Terra Antiqua (v1.0.2).
+
+The old pdf manual is still available <a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">here</a>.
