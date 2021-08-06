@@ -1,0 +1,43 @@
+---
+layout: page
+title: About Terra Antiqua
+comments: false
+working: false
+---
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+</head>
+<title> Introduction </title>
+
+<body>
+<p>
+<b>Terra Antiqua</b> is a plugin for the software <a href="https://qgis.org/en/site/">QGIS</a> that enables efficient and streamlined paleogeographic reconstructions based on input data positioned according to past positions of tectonic plates with the software <a href="https://www.gplates.org/">GPlates</a>. <b>Terra Antiqua</b> offers a user-friendly interface with various taylored algorithms geared to manipulate geographic features and generate maps for different time slices. All the <b>Terra Antiqua</b> tools are designed based on a common user interface scheme nestled in the QGIS environment that enables using all the functionalities of QGIS. Deep knowledge of QGIS and GPlates is not necessary to use <b>Terra Antiqua</b> and some basic clues on how to use these softwares are provided in the manual and tool help for beginners.
+<p>
+This present manual will guide you through the successive steps leading to the making of a global paleogeographic reconstruction. The various tools of <b>Terra Antiqua</b> may also be used for more specific tasks such as enhancing an existing reconstruction, modifying a portion of an existing reconstruction, making a  reconstruction for a limited part of the Earth or any other creative application you can think of and tell us about.  The manual is organised according to an intuitive workflow we designed to make a global reconstruction. Throughout the process, you are provided with guiding tips for each algorithm and tool.
+<p>
+The standard approach for paleogeographic reconstruction used in <b>Terra Antiqua</b> is first to generate a DEM raster file that combines:
+<ol><li> Modern topography of the continental blocks rotated back to their past positions at the targeted age,</li>
+    <li>the past bathymetry of the oceans at the targeted age, and</li>
+        <li>the ice-cap topography. </li></ol>
+<p>Terra Antiqua then offers a set of tools to modify the topography and bathymetry of this DEM raster file (or “paleoDEM”)  depending on available datasets (shorelines, fossil data, paleoelevation data, etc…) that are rotated to their past positions and loaded on the paleoDEM under QGIS. Finally, <b>Terra Antiqua</b> has another set of tools to fine tune the resulting raster such as smoothing or removing artifacts (see the <i>Terra Antiqua workflow figure</i> below). This approach is inspired by previous reconstruction procedures developed by <a href="https://doi.org/10.5194/cp-12-1635-2016">Baatsten et al. (2016)</a> and <a href="https://doi.org/10.1016/j.earscirev.2021.103508">Poblete et al. (2021)</a> where areas of modern topography are selected within a polygon (or masks) and simply altered with basic algorithms. To this simple approach, <b>Terra Antiqua</b> has added many features including generating mountains and oceanic basins.
+
+<p>
+To make a global reconstruction, <b>Terra Antiqua</b> takes as an input several files prepared with the software <a href="https://www.gplates.org/">GPlates</a>. This tectonic plate reconstruction software enables relocating features in their past positions (or future positions!) according to current knowledge of geodynamics. <b>Terra Antiqua</b> comes with an initial bundle of such files already prepared that will enable making reconstructions with limited usage of <i>Gplates</i>.  However, we also provide specific advice on how to use <i>Gplates</i> for preparing your own input files or for special advanced reconstructions tricks. This is explained in the chapter <a href="Preliminary_steps.html">Preliminary steps: Preparing the input data for Terra Antiqua with GPlates</a>.
+<p>
+<section id="workflow_summary"><img src="/assets/images/Workflow.png" alt="figure 1: Tearra Antiqua Workflow"></section>
+
+<p>The main workflow to make a paleoreconstruction is divided into Primary tools” and “Secondary tools” (see <i>Terra Antiqua Workflow</i> above). Primary tools enable to generate the main raster file with the framework of the reconstruction. They consist of 4 tools: <a href="compile_tb.html">Combine Topo/Bathymetry<img class="tool-icon" src="/assets/images/icon_compile_tb.png" alt="icon_compile_tb"></a>, <a href="set_pls.html">Set Shorelines<img class="tool-icon" src="/assets/images/icon_set_pls.png" alt="icon_set paleoshorelines"></a>, <a href="modify_tb.html">Modify Topo/Bathymetry<img class="tool-icon" src="/assets/images/icon_modify_tb.png" alt="icon_modify_tb"></a>, <a href="create_tb.html">Create Topo/Bathymetry<img class="tool-icon" src="/assets/images/icon_create_tb.png" alt="icon_create_tb"></a>. These tools are supposed to be used successively for a standard reconstruction procedure but they may be used in any order for special cases, for example to correct some parts after the first generation of a reconstruction. Secondary tools are used throughout the process. They enable the user to fine-tune the reconstruction, solve common issues and finalize the raster.
+They consist of the following tools: <a href="remove_arts.html">Remove Artefacts<img class="tool-icon" src="/assets/images/icon_remove_arts.png" alt="icon_remove artefacts_tb"></a>, <a href="fill_gaps.html">Fill Gaps<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="smoothing.html">Smooth Raster<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="isostat_cp.html">Isostatic Compensation<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="copy_paste.html">Copy / Paste Raster<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="set_sl.html">Set New Sea Level<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="calc_bathy.html">Calculate Bathymetry<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>, <a href="prepare_masks.html">Prepare Masks<img class="tool-icon" src="/assets/images/icon_prepare_masks.png" alt="icon_prepare_masks"></a>, and <a href="change_symbology.html">Change Map Symbology<img class="tool-icon" src="/assets/images/icon_std_proc.png" alt="icon_standard processing tools"></a>.
+<p>
+In summary, <b>Terra Antiqua</b> enables to combine various files into a raster and then to modify it according to various geologic information that can be imported onto the raster (e.g. shorelines, fossil locations, paleoaltimetry data, etc...). Modern topography/bathymetry can be modified (increased or decreased) or completely new topography/bathymetry can be created. Modifications are performed using algorithms specifically designed for various tasks and applied to areas defined by polygons (or masks) that you can draw with QGIS or import. The raster can be modified with all functionalities of QGIS and the final paleogeographic map can be saved in any raster format supported by modern GIS software (such as GeoTIFF, netCDF, JPEG, etc.) in the form of a digital elevation model or symbolized raster.
+<p> In this website, we describe each of Terra Antiqua’s tools, their use, and technical characteristics in detail. A <b>step-by-step</b> description will  guide you through the practical use of each tool.
+
+</p>
+
+
+
+    
+</body>
+</html>
+
