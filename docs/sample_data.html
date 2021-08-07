@@ -1,0 +1,116 @@
+---
+layout: page
+title: Sample Data Bundle
+working: false
+---
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/CSS/StyleSheet.css">
+</head>
+<title> Sample Data Bundle </title>
+
+<body>
+
+
+<p>This manual gives you all the information you need to use Terra Antiqua and explore its capabilities. After installing this plugin, a bundle of files can be downloaded that will allow you to start using the plugin right away. This set of files enables you to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files.
+.</p>
+<a href="{{site.baseurl}}/assets/TA_sample_data_bundle.zip" download>
+    <h3> The sample data can be downloaded here. </h3>
+  </a>
+Alternative download from Google Drive: <a href="https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing">here</a>
+(the complete folder “TA_sample_data_bundle” is to be downloaded as it is)
+<div class="tip">
+    <p>
+    This sample data will allow you to do a full global reconstruction at 30 Ma. More files on different age steps (60, 50, 40, 30, 20 Ma) are available on <a href="https://map.paleoenvironment.eu/">map.paleoenvironment.eu</a>. In the following table, you see a description next to each file saying what it is and what it is used for.
+</p>
+</div>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>What it is used for</th>
+        <th>File type</th>
+    </tr>
+    <tr>
+        <td>Rotated_ETOPO1_
+            Bedrock_30.00Ma.tif</td>
+        <td>DEM of present-day bedrock topography rotated with GPlates to the continents’ position at 30 Ma</td>
+        <td>This raster will be compiled with the Paleobathymetry to generate a full global DEM that can be further modified.
+            This is the starting point of Terra Antiqua.</td>
+        <td>Raster (Geotiff)</td>
+
+        </tr>
+    <tr>
+        <td>Rotated_ETOPO1_
+            Ice_30.00Ma.tif</td>
+        <td>DEM of present-day ice topography rotated with GPlates to the continents’ position at 30 Ma.</td>
+        <td>If you want to do an isostatic compensation, you need this version of the present-day topography.+
+            It shows the same topography as the previous DEM except for Greenland and Antarctica where it shows the ice surface topography. <br>
+            The <i>Isostatic Compensation</i> tool compares the bedrock and ice topographies to calculate the ice thickness.</td>
+        <td>Raster (Geotiff)</td>
+    </tr>
+    <tr>
+        <td>Paleobathymetry_30.tif</td>
+        <td>DEM of the 30 Ma ocean bathymetry coming from Muller et al. 2008 (already in past coordinates).</td>
+        <td>This raster will be compiled with the present- day topography to generate a full global DEM that can be further modified.
+            This is the starting point of Terra Antiqua.</td>
+        <td>Raster (Geotiff)</td>
+        </tr>
+    
+    <tr>
+        <td>Continental_blocks.shp</td>
+        <td>Polygons representing the continental blocks.</td>
+        <td>They are useful to tell the tool Compile TB where the continental blocks are so that it can take a buffer around their edges.</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <tr>
+        <td>Paleoshorelines.shp</td>
+        <td>Masks for the paleoshorelines</td>
+        <td>These masks are ready for use with the tool Set_pls. They define the emerged land.
+            What is within the polygons is emerged, and what is outside them is submerged.</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <tr>
+        <td>Masks_large_regions_modif.shp</td>
+        <td>Masks for the continental-scale areas to modify the topography of.</td>
+        <td>These polygons mark areas the topography of which must be rescaled. This shapefile can be used in the tool <i>Modify Topo-/Bathymetry</i>. The attribute table is populated with new minimum and maximum values (to use the rescaling method).</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <tr>
+        <td>Masks_smaller_regions_modif.shp</td>
+        <td>Masks for the local-scale areas to modify the topography of.</td>
+        <td>These polygons mark areas the topography of which must be rescaled. This shapefile can be used in the tool <i>Modify Topo-/Bathymetry</i>. The attribute table is populated with new minimum and maximum values (to use the rescaling method).</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <tr>
+        <td>Antarctica+Greenland.shp</td>
+        <td>Masks covering Greenland and Antarctica</td>
+        <td>These polygons correspond to the tectonic blocks of Antarctica and Greenland. They might be useful for isostatic compensation.
+            If you don’t want to do the compensation for both poles, you can extract from this shapefile the polygons you want in order to constrain the Isostatic Compensation to one of the poles.</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <tr>
+        <td>Cordillera_Darwin.shp
+        <br>Ethiopia.shp
+        <br>High Andes.shp
+        <br>Tibet.shp
+        </td>
+        <td>Masks for areas to create mountainous regions.</td>
+        <td>These polygons mark areas where new mountains are to be created. These shapefiles can be used in the tool Create TB. Each file contains one mask that can be used with the tool.</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    <!-- missing line about Antarctica_23Ma_paxman_30.00Ma.tif
+    not sure if it will be in the bundle or not. needs discussion-->
+
+   <tr>
+        <td>Create_bathy.shp</td>
+        <td>Masks for areas to create bathymetry</td>
+        <td>These polygons mark areas where new seas are to be created.
+            This shapefile can be used in the tool Create TB. The file contains 2 masks so you must select one of them before you run the tool.</td>
+        <td> Vector (shapefile)</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
