@@ -29,13 +29,22 @@ Please download the whole folder "TA_sample_data_bundle" as it is.</p>
 Contact e-mail: terraantiqua.qgis@gmail.com
   
 <hr>
+<br>
 <hr> 
+<br>
 <p>This site is under construction. For now, please refer to the pdf manual:</p> 
 <p><a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a></p>
+<br>
 <hr>
+<br>
 <hr>
+<br>
+<br>
 <p>The part below these lines is still under construction. Please use the pdf version of the manual.</p>
+<br>
+<br>
 <hr>
+<br>
 <hr>
 <br>
 
