@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Troubleshooting | Terra Antiqua Documentation</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Troubleshooting" />
+<meta name="author" content="Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions." />
+<meta property="og:description" content="This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions." />
+<link rel="canonical" href="https://jaminzoda.github.io/terra-antiqua-documentation//troubleshooting.html" />
+<meta property="og:url" content="https://jaminzoda.github.io/terra-antiqua-documentation//troubleshooting.html" />
+<meta property="og:site_name" content="Terra Antiqua Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Troubleshooting" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet"},"url":"https://jaminzoda.github.io/terra-antiqua-documentation//troubleshooting.html","headline":"Troubleshooting","description":"This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions.","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://jaminzoda.github.io/terra-antiqua-documentation//feed.xml" title="Terra Antiqua Documentation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Terra Antiqua Documentation <img style="width: 6%" src="/assets/images/icon_main.png"
+        alt="Terra Antiqua"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Intro.html">About Terra Antiqua</a><a class="page-link" href="/Preliminary_steps.html">Preparing the input data with GPlates</a><a class="page-link" href="/primary_tools.html">Primary tools<img style="width:10%" src= "/assets/images/primary_tools.png" alt="Icons inside"></a><a class="page-link" href="/secondary_tools.html">Secondary tools<img style="width:10%" src= "/assets/images/secondary_tools.png" alt="Icons inside"></a><a class="page-link" href="/color_palettes.html">Color Palettes</a><a class="page-link" href="/sample_data.html">Sample Data Bundle</a><a class="page-link" href="/how_to.html">How to...</a><a class="page-link" href="/troubleshooting.html">Troubleshooting</a><a class="page-link" href="/Developpers.html">Info for Developpers</a><a class="page-link" href="/Licences.html">Licenses</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+    
+  <header class="post-header">
+    <h1 class="post-title">Troubleshooting</h1></header>
+      
+    <html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+</head>
+<title> Troubleshoting </title>
+
+<body>
+
+<h1>Known issues and Workarounds</h1>
+
+<p>This table lists all known issues and errors the user may face while using Terra Antiqua. We are aware of these issues and are working on definitive solutions. The situations mentioned in this page are not integrated in the other sections of this manual because they do not concern everyone (probably only a minority of users) and only happen in particular cases.
+<br>In order to identify many of these issues, you will need to pay attention to the Log tab of the Terra Antiqua tool you are using, or open the <b>Log Messages Panel</b>: <a href="https://docs.qgis.org/3.16/en/docs/user_manual/introduction/general_tools.html#log-messages-panel">instructions to open the panel</a></p>
+<table>
+    <tr>
+        <th>Issue</th>
+        <th>Explanation</th>
+        <th>Workaround</th>
+        <th>Related tool(s)</th>
+    </tr>
+    <tr>
+        <td>In the parameter window, the option <b><i>selected features only</i></b> isn’t available.</td>
+        <td>You have to select the features on the map canvas before choosing the vector layer in the parameters window.
+            If you don’t do it in this order, the option does not activate.</td>
+        <td><ol>
+            <li>On the parameter window, select another vector layer</li>
+            <li>Make sure you have selected at least one feature on the map canvas</li>
+            <li>Go back to the parameter window and select back the right vector layer</li>
+            </ol>
+        </td>
+        <td>Modify Topo/Bathymetry<br>
+            Create Topo/Bathymetry
+</td>
+        </tr>
+    <tr>
+        <td>When generating two different maps for the same period, if you have used different smoothing factors, the shorelines may be different.</td>
+        <td>The smoothing factor is the base  of the algorithm. The resulting map  is fundamentally affected by the value you choose. The shorelines thus have considerable differences depending on the smoothing factor.</td>
+        <td>Use the tool Set Paleoshorelines after the tool smooth raster with the same parameters for both maps.</td>
+        <td>Smoothing</td>
+        </tr>
+    <tr>
+        <td>Most of the tools don’t work and the <i>Log Messages Panel</i> shows a processing error <b>gdal:rasterize</b> , or another error related to gdal.</td>
+        <td>Terra Antiqua can’t find the GDAL algorithms it uses to perform most of its tasks.</td>
+        <td><ol>
+            <li>In the Plugin manager, activate the processing plugin.</li>
+            <li>Go to Settings > Options > Processing tab</li>
+            <li>Check the box to activate gdal inside Providers</li>
+            </ol>
+        </td>
+        <td> Most of the tools</td>
+        </tr>
+    <tr>
+        <td>You get an error message saying that one or more layers in your project have a different CRS (Coordinate Reference System) from the one used in the project.</td>
+        <td>One or more of the layers on your map canvas have a CRS that doesn’t match the main CRS of the project. For Terra Antiqua to work, all polygon and raster layers must have the same CRS.</td>
+        <td>Make sure all the layers loaded into your map canvas have the same CRS, and reproject the ones that don’t (drop-down menu Raster > Projections). If a layer doesn’t have a CRS, you need to georeference it using the appropriate CRS (Plugin: Georeferencer GDAL).</td>
+        <td> All the tools</td>
+        </tr>
+    <tr>
+        <td>The <i>Compile Topo/Bathymetry</i> tool doesn’t work and the Log tab displays an error saying that the raster layers have different sizes.</td>
+        <td>The tool Compile Topo/Bathymetry needs the rasters it compiles to have exactly the same size, and the layers you are trying to compile don’t have the same size.</td>
+        <td>The Log tab of this tool lists the layers with different sizes. Check all these layers and make sure the ones you use next have the same size.</td>
+        <td>Compile Topo/Bathymetry</td>
+        </tr>
+    </table>
+
+<div class="technical-details"><p> If you are a developper and think of a technical solution to any of these issues, please refer to the section <a href="developpers.html#contributions">Contributions</a>.</p></div>
+    <div class="note"><p>To suggest new issues to add to the list, or give feedback on the ones already there, please comment below or fill in this form:<a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"> Feedback & bug reports</a>.
+    </p>
+</div>
+    
+
+</body>
+</html>
+
+
+    
+
+</article>
+
+
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://jaminzoda.github.io/terra-antiqua-documentation//troubleshooting.html';
+      this.page.identifier = 'https://jaminzoda.github.io/terra-antiqua-documentation//troubleshooting.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://terraantiqua.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Terra Antiqua Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet</li><li><a class="u-email" href="mailto:terraantiqua.qgis@gmail.com">terraantiqua.qgis@gmail.com</a></li><li>        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"> Feedback & Bug reports</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jaminzoda"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jaminzoda</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions.</p>
+       
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
