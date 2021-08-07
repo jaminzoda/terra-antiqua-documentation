@@ -28,18 +28,17 @@ Please download the whole folder "TA_sample_data_bundle" as it is.</p>
 
 Contact e-mail: terraantiqua.qgis@gmail.com
   
----
----    
+<hr>
+<hr> 
 <p>This site is under construction. For now, please refer to the pdf manual:</p> 
 <p><a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a></p>
 <hr>
 <hr>
-<br>
 <p>The part below these lines is still under construction. Please use the pdf version of the manual.</p>
 <hr>
+<hr>
 <br>
-<hr>
-<hr>
+
 
     
 <p style= "text-align: justify"> This is the web version of the Terra Antiqua manual. It will guide you through the successive steps leading to the making of a global paleogeographic reconstruction. The various tools of Terra Antiqua may also be used for more specific tasks (see <a href="Intro.html">Introduction</a>). 
