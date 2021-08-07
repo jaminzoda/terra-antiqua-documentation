@@ -7,7 +7,8 @@ title: Index
 
 A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
 
-# This site is under construction. For now, please refer to the pdf manual: <a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a>
+# This site is under construction. For now, please refer to the pdf manual: 
+<p><a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a></p>
 
 --- 
 
@@ -15,10 +16,12 @@ A user's manual is available where we detail each of Terra Antiqua’s tools, it
 Terra Antiqua is available in the QGIS oficial respository. To install the plugin, follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
 
 
- <a href="https://qgis.org/en/site/forusers/download.html">Link to QGIS download page</a>
+ <p><a href="https://qgis.org/en/site/forusers/download.html">Link to QGIS download page</a></p>
 
  ## Sample data
-you can download the sample data bundle for Terra Antiqua <a href="https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing" here</a>. This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the User's Manual.
+you can download the sample data bundle for Terra Antiqua here:
+<p><a href="https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing"> sample data</a></p>. 
+This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the User's Manual.
  ### Please download the whole folder "TA_sample_data_bundle" as it is.
 
  ## Contact e-mail: terraantiqua.qgis@gmail.com
