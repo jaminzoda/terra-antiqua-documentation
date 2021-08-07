@@ -1,0 +1,52 @@
+---
+layout: tool
+title: Fill gaps
+icon: {{site.baseurl}}/assets/images/icon_std_proc.png
+working: false
+---
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+    </head>
+    <title> Fill gaps </title>
+    
+    <body>
+        <p>Some areas may end up missing elevation values. This issue is common for paleogeographic maps because, after rotating present-day topography / bathymetry, gaps can appear between blocks. These gaps represent areas where the topography / bathymetry was destroyed by deformation or subduction of a crust portion.
+        <p>This tool is intended to interpolate values for these gaps. It generates elevation data in each empty pixel by averaging pixel values around it, using inverse distance weighting. There is the option to use it on the entire map or constrain it to a region.</p>
+        <div class="technical-details"><p>The inverse distance weighting (IDW) interpolation method, implemented in the GDAL library, is a fast algorithm to fill the empty pixels (NoData values). The Fill gaps tool gets NoData values from the raster's metadata and seeks their position to be able to fill these areas, interpolating between the surrounding valid values.</p></div>
+        <p>For very large areas a more realistic outcome may be obtained by creating new topo/bathymetry using the tool  <a href="create_tb.html">Create Topo- / Bathymetry</a> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_create_tb.png"
+            alt="Icon for Create Topo/Bathymetry">.</p>
+        <p><hr></p>
+        <h2>Step-by-step</h2>
+
+            <ol>
+                <li> <p> Click on the icon <div2 class="icon-container">
+                    <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
+                    alt="Icon Standard Processing tools"></div2>. The Standard Processing window will pop up.</p>
+                    </li>
+                    
+                   <li><p> In the field <b><i>How would you like to process the input DEM</i></b>, choose <b><i>Fill gaps</i></b>.</p>
+                       <div2 class= "icon-container">
+                       <img src="{{site.baseurl}}/assets/images/GUI_fill_gaps.png"
+                       alt="GUI_Fill gaps"></div2></li>
+       
+                   <li><p> In <b><i>Raster to be modified</i></b>, choose the DEM you want to fill gaps in.</p></li>
+                   
+                   <li> <p>If you have a set of masks you want to limit the interpolation to, check the box <b><i>Interpolate inside polygon(s) only</i></b>. In this case, you will have to select the layer containing these masks in the field below. If you want to fill the gaps in the full extent of the map, skip this step and leave the box unchecked.</p></li>
+                   <li><p>If you want to smooth the output raster once all gaps are interpolated, check the box <b><i>Smooth the resulting raster</i></b>, select a smoothing type, and a smoothing factor. Otherwise, skip this step.</p></li>
+                   <div class="note">
+                         
+                         <p>If you have selected the option to <b><i>Interpolate inside polygon(s) only</i></b> in step 4, the smoothing will be constrained to the same polygon(s) as the interpolation.</p></div>
+                   
+                   <div class="note">
+                       For details about raster smoothing, please refer to this page: <a href="smoothing.html"> Smooth raster</a>.</div>
+
+                 
+                    <li>
+                    <p> Choose the <b><i>Output file path</b></i>, and click Run.</p></li></ol>
+      
+    </body>
+    </html>
+<!-- Copyright (C) 2021 by Jovid Aminov, Diego Ruiz, Guillaume Dupont-Nivet
+ Terra Antiqua is a plugin for the software QGis that deals with the reconstruction of paleogeography.
+Full copyright notice in file: terra_antiqua.py -->
