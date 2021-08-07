@@ -8,6 +8,9 @@ title: Index
 A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
 
 --- 
+## This site is under construction. For now, please refer to the pdf manual:
+
+<p><a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a></p>
 
 ## Download & Installation
 Terra Antiqua is available in the QGIS oficial respository. To install the plugin, follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
@@ -27,7 +30,7 @@ Contact e-mail: terraantiqua.qgis@gmail.com
   
 ---
 ---    
-# This site is under construction. For now, please refer to the pdf manual: 
+<p>This site is under construction. For now, please refer to the pdf manual:</p> 
 <p><a href="https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing">Pdf Manual</a></p>
 <hr>
 <hr>
