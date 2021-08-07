@@ -1,0 +1,53 @@
+---
+layout: tool
+title: Prepare Masks
+icon: {{site.baseurl}}/assets/images/icon_prepare_masks.png
+working: false
+---
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/CSS/StyleSheet.css">
+    </head>
+    <title> Prepare masks </title>
+    
+<body>
+    
+    <p>Vector polygon masks stored in shapefiles play a central role in Terra Antiqua because they control the area where topography and bathymetry are modified/created, and they can also contain attributive information used by Terra Antiqua’s algorithms.<br>
+    Often, Gplates works not only with polygons but also polylines to represent the masks. Then the output consists of separate shapefiles.
+    <div class="technical-details">
+        <p>This tool allows polygonization of masks to combine them into a single shapefile to make it easy to work with them.
+    Like the <a href="compile_tb.html">Compile Topo/Bathymetry tool</a>, the masks are combined in order, and overlapping masks clip underlying ones.</p></div>
+    <p>Polygons can also contain error-prone invalid geometries that need to be fixed before they can be used in Terra Antiqua. These invalid geometries are solved by the present tool.</p>
+    <p><hr></p>
+    <h2>Step-by-step</h2>
+    
+    <ol>
+        <li> <p> Click on the icon <div2 class="icon-container">
+            <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_prepare_masks.png"
+            alt="Icon Prepare Masks"></div2>. The Parameters window will pop up.</p>
+            </li>
+            
+           <li><p> Enter in the table the different mask layers that need to be merged.</p>
+               <div class= "icon-container">
+               <img src="{{site.baseurl}}/assets/images/GUI_prepare_masks.png"
+               alt="GUI_Prepare Masks"></div>
+               <p><br></p>
+               <div class="note"> <p>The arrangement of the layers is important. They are combined in order. The layers on top of the list will be of higher order and the overlapping geometries of the underlying layers (with lower order) will be erased. Use the buttons at the bottom of the list to add, remove, and arrange rows: <div1 class="icon-container"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/addButton.png"
+                   alt="add_Button"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/removeButton.png"
+                       alt="remove_Button"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/arrow_up.png"
+                           alt="arow up"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/arrow_down.png"
+                               alt="arrow down"></div1>. Be aware that you need to add a new line for each raster file with the button <div1 class="icon-container"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/addButton.png"
+                                   alt="add_Button"></div1>, whether you use the drop-down list or the browse button <div1 class="icon-container"> <img class= "tool-icon" src="{{site.baseurl}}/assets/images/browsebutton.png"
+                                       alt="browse_Button"></div1> .</p></div>
+               </li>
+           <li><p>The output file combining all masks will have a new attribute called category showing what the original file for each polygon was. In the column <b><i>Mask category</i></b>, you should determine what will be written in that field.</p></li>
+
+           <li><p> Choose the <b><i>Output file path</b></i>, and click Run.</li>
+    </ol>
+        
+</body>
+</html>
+
+<!-- Copyright (C) 2021 by Jovid Aminov, Diego Ruiz, Guillaume Dupont-Nivet
+ Terra Antiqua is a plugin for the software QGis that deals with the reconstruction of paleogeography.
+Full copyright notice in file: terra_antiqua.py -->
