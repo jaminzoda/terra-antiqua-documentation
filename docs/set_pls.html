@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Set Paleoshorelines | Terra Antiqua Documentation</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Set Paleoshorelines" />
+<meta name="author" content="Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions." />
+<meta property="og:description" content="This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions." />
+<link rel="canonical" href="https://jaminzoda.github.io/terra-antiqua-documentation//set_pls.html" />
+<meta property="og:url" content="https://jaminzoda.github.io/terra-antiqua-documentation//set_pls.html" />
+<meta property="og:site_name" content="Terra Antiqua Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Set Paleoshorelines" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet"},"url":"https://jaminzoda.github.io/terra-antiqua-documentation//set_pls.html","headline":"Set Paleoshorelines","description":"This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions.","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://jaminzoda.github.io/terra-antiqua-documentation//feed.xml" title="Terra Antiqua Documentation" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Terra Antiqua Documentation <img style="width: 6%" src="/assets/images/icon_main.png"
+        alt="Terra Antiqua"></a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Intro.html">About Terra Antiqua</a><a class="page-link" href="/Preliminary_steps.html">Preparing the input data with GPlates</a><a class="page-link" href="/primary_tools.html">Primary tools<img style="width:10%" src= "/assets/images/primary_tools.png" alt="Icons inside"></a><a class="page-link" href="/secondary_tools.html">Secondary tools<img style="width:10%" src= "/assets/images/secondary_tools.png" alt="Icons inside"></a><a class="page-link" href="/color_palettes.html">Color Palettes</a><a class="page-link" href="/sample_data.html">Sample Data Bundle</a><a class="page-link" href="/how_to.html">How to...</a><a class="page-link" href="/troubleshooting.html">Troubleshooting</a><a class="page-link" href="/Developpers.html">Info for Developpers</a><a class="page-link" href="/Licences.html">Licenses</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+    
+  <header class="post-header"><div class="icon-for-title">
+        <img class="tool-icon-for-title" src= "/assets/images/icon_set_pls.png" alt="Icon of the tool"><h1 class="post-title">Set Paleoshorelines</h1>
+     </div></header>
+  
+    <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/CSS/StyleSheet.css">
+    </head>
+    <title> Set Paleoshorelines </title>
+    <body>
+        
+       <p> This tool will redefine the shorelines based on provided polygons delineating land-sea boundaries. These polygons can be produced by yourself (see instructions below) on QGIS or any other GIS software based on various datasets (e.g. fossils from <a href="http://www.paleobiodb.org">www.paleobiodb.org</a>).
+        
+        <p>
+        
+        This can be a time-consuming operation depending on the area covered and the level of detail to be obtained. You can also use already prepared files of polygons of shorelines integrating several other sources of data. We propose a set for various ages that were already built that are included in the data bundles (see paleoshoreline files in “Sample data”). Other shoreline estimates may be obtained in the literature  (e.g. Golonka et al. 2006) but will require rotating using GPlates with careful adjustments of the tectonic block rotation models and checking of recent fossil data.
+        
+        <div class="technical-details">
+        <p>Setting paleoshorelines is a simple reassignment of pixel values based on their position relative to the shorelines of the time of reconstruction.
+        If a pixel with a positive elevation value is outside the paleoshoreline polygon, its value will be modified to submerge it. Conversely, a pixel inside the polygon that has a negative value will be brought above sea level.
+       </p> </div>
+       <p> Pixel value reassignment is performed using two alternative approaches: interpolation or rescaling. When choosing interpolation, all positive elevation values outside the paleoshoreline polygons are removed and then interpolated from adjacent pixels. The same is done for the negative values inside the polygons. However, this simple processing may lead to a loss of the original pattern along the shorelines such that the rescaling approach has been developed. In the case of rescaling, the pixel values to be modified are linearly rescaled between 0.1 and the maximum defined by the user. When submerging, it is rescaled between -0.1 and the minimum specified by the user.</p>
+       
+       <div class="note">
+          <p> Note that this tool will be applied to the entire file. If you want to apply it to a limited area only you can export to a new file a rectangular section of the map with QGIS (in the layer window right click on the raster file name and choose <i>“export > save as...”</i> to select the rectangular area). Then apply the tool to this new file. However, if you have global topo/bathymetry data, it is easier to first run this tool globally and then cut a rectangular section as described above.</p>
+           </div>
+        <p><hr></p>
+        <h2>Step-by-step</h2>
+
+            <ol>
+                <li> <p> Click on the icon <div2 class="icon-container">
+                    <img class="tool-icon" src="/assets/images/icon_set_pls.png"
+                    alt="Icon Set Paleoshorelines"></div2>. The parameters window will pop up.</p>
+                    <div2 class= "icon-container">
+                        <img src="/assets/images/GUI_set_pls.png"
+                        alt="GUI_Set Paleoshorelines"></div2></li>
+                    
+                   <li><p> Select the DEM you want to modify the shorelines of.</p></li>
+                   
+                   <li><p> Select the shapefile containing the right paleoshoreline polygons.</p><div2 class= "icon-container">
+                       <img src="/assets/images/polyg_set_pls.png"
+                       alt="Masks for Set Paleoshorelines"></div2></li>
+                   <p><br></p>
+                   <div class="tip">
+                      <div1 class= "icon-container">
+                          <img class="warning-tip-icon" src="/assets/images/icon_tip.png"
+                          alt="recommendation"><p> The polygons can be taken from published sources (e.g: Golonka, 2006), but they should be adapted and modified following fossil occurrences and/or other geological data.</p></div>
+                   <p><br></p>
+                   
+                   <li><p> Choose the interpolation mode.</p>
+                   <ul><li><b><i> Interpolation</i></b>: all values to be emerged/submerged by the algorithm will be erased, leaving empty spaces. The elevation and bathymetry values for the erased pixels  will subsequently be interpolated from adjacent pixels. The shoreline (elevation=0) will be fixed to the polygons’ perimeter during the whole process.This mode will also interpolate over any gap (NoData values) in the DEM.</li>
+
+                   <li> <p><b><i>Rescaling</i></b>: the originally submerged values will be linearly rescaled between 0.1 m and the elevation you enter. For the newly submerged areas, the originally emerged values will be linearly rescaled between -0.1 m and the depth you enter.</li></ul></p>
+
+                    
+                    <li>
+                   <p> Choose the <b><i>Output file path</b></i>, and click Run.</li>
+                
+                
+                
+                
+            </ol>
+        
+        
+        
+        
+        
+        </p>
+</body>
+</html>
+
+<!-- Copyright (C) 2021 by Jovid Aminov, Diego Ruiz, Guillaume Dupont-Nivet
+ Terra Antiqua is a plugin for the software QGis that deals with the reconstruction of paleogeography.
+Full copyright notice in file: terra_antiqua.py -->
+
+    
+
+</article>
+
+<p></br></p>
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://jaminzoda.github.io/terra-antiqua-documentation//set_pls.html';
+      this.page.identifier = 'https://jaminzoda.github.io/terra-antiqua-documentation//set_pls.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://terraantiqua.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<p></br></p>
+
+<div class="links-pages">
+    <h2>Index:</h2>
+</div>
+
+<div class="links-pages" style="text-align:center;">
+
+    <h2><b><a href="Intro.html">Introduction</a></b></h2>
+    <h3><b><a href="Preliminary_steps.html">Preliminary Steps</a></b></h3>
+</div>
+<div class="links-pages">
+    <table class="links-pages">
+    <tr>
+        <th><p><a href="primary_tools.html">Primary tools</a></p></th>
+        <th><p><a href="secondary_tools.html">Secondary tools</a></p></th>
+    </tr>
+  <tr>
+    <td><a href="compile_tb.html">Compile  Topo- /Bathymetry<img src="/assets/images/icon_compile_tb.png" alt="icon_compile_tb" width="9%"/></a></td>
+    <td><a href="remove_arts.html">Remove Artefacts<img src="/assets/images/icon_remove_arts.png" alt="icon_remove artefacts" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td><a href="set_pls.html">Set Paleoshorelines<img src="/assets/images/icon_set_pls.png" alt="icon_set_paleoshorelines" width="10%"/></a></td>
+      <td><a href="prepare_masks.html">Prepare Masks<img src="/assets/images/icon_prepare_masks.png" alt="icon_prepare_masks" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td><a href="modify_tb.html">Modify Topo- /Bathymetry<img src="/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="10%"/></a></td>
+      <td><a href="fill_gaps.html">Fill Gaps<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td><a href="create_tb.html">Create Topo- /Bathymetry<img src="/assets/images/icon_create_tb.png" alt="icon_create_tb" width="10%"/></a></td>
+      <td><a href="isostat_cp.html">Isostatic Compensation<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td> - - - - - - - - - -</td>
+      <td><a href="smoothing.html">Smooth Raster<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td><a href="sample_data.html"><b>Sample Data Bundle</b> </a></td>
+      <td><a href="set_sl.html">Set New Sea Level<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+  </tr>
+  <tr>
+      <td><a href="how_to.html"><b>How-to...</b> </a></td>
+      <td><a href="calc_bathy.html">Calculate Bathymetry<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+    </tr>
+  <tr>
+      <td><a href="troubleshooting.html"> <b>Troubleshooting</b></a></td>
+      <td><a href="copy_paste.html">Copy / Paste Raster<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+    </tr>
+  <tr>
+      <td><a href="Developpers.html"> <b>Info for Developpers</b></a></td>
+      <td><a href="change_symbology.html">Change Map Symbology<img src="/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></td>
+   
+  </table>
+<!--
+    <ul><p><h3>Primary tools:</h3></p>
+        <h4> <li><a href="compile_tb.html">Compile Topo- / Bathymetry</a></li></h4>
+        <h4> <li><a href="set_pls.html">Set Paleoshorelines</a></li></h4>
+        <h4> <li><a href="modify_tb.html">Modify Topo- / Bathymetry</a></li></h4>
+        <h4> <li><a href="create_tb.html">Create Topo- / Bathymetry</a></li></h4>
+    </ul>
+   
+    <ul> <p><h3>Secondary tools:</h3></p>
+            <h4> <li><a href="remove_arts.html">Remove Artefacts</a></li></h4>
+            <h4> <li><a href="prepare_masks.html">Prepare Masks</a></li></h4>
+            <h4> <li><a href="fill_gaps.html">Fill Gaps</a></li></h4>
+            <h4> <li><a href="copy_paste.html">Copy/Paste Raster</a></li></h4>
+            <h4> <li><a href="isostat_cp.html">Isostatic Compensation</a></li></h4>
+            <h4> <li><a href="smoothing.html">Smooth Raster</a></li></h4>
+            <h4> <li><a href="set_sl.html">Set New Sea Level</a></li></h4>
+            <h4> <li><a href="calc_bathy.html">Calculate Bathymetry</a></li></h4>
+        </ul>
+-->
+    </div>
+
+
+
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Terra Antiqua Documentation</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet</li><li><a class="u-email" href="mailto:terraantiqua.qgis@gmail.com">terraantiqua.qgis@gmail.com</a></li><li>        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"> Feedback & Bug reports</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jaminzoda"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jaminzoda</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions.</p>
+       
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
