@@ -5,6 +5,31 @@ title: Index
 
 ## Welcome to Terra Antiqua documentation page!
 
+A user's manual is available where we detail each of Terra Antiqua’s tools, its use, and technical characteristics. There, step by step indications serve as guidance for the practical use of each tool.
+
+# This site is under construction. For now, please refer to the pdf manual: https://docs.google.com/document/d/1YauPn7iQ0677rOtbOIaBTwIBDpbLUAMyk4xwNpCGcGU/edit?usp=sharing
+
+--- 
+
+## Download & Installation
+Terra Antiqua is available in the QGIS oficial respository. To install the plugin, follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins... -> All -> Search for "Terra Antiqua" -> Install plugin.
+
+Alternatively, a zip version of the plugin can be downloaded here: https://github.com/jaminzoda/terra-antiqua-documentation/blob/2b497d3ed4010c5b388657191bfba1f79e081185/terra_antiqua_v1.0.1.zip
+To install the plugin from the zip file, follow these steps: Open QGIS main window -> Plugins -> Manage and install plugins … -> Install from zip - > Browse -> select the zip file -> Install plugin.
+
+ Link to QGIS download page: https://qgis.org/en/site/forusers/download.html
+
+ ## Sample data
+you can download the sample data bundle for Terra Antiqua here: https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing. This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the User's Manual.
+ ### Please download the whole folder "TA_sample_data_bundle" as it is.
+
+ ## Contact e-mail: terraantiqua.qgis@gmail.com
+  
+---
+---     
+---
+# Site under construction, please refer to the pdf manual (link above)
+    
 <p style= "text-align: justify"> This is the web version of the Terra Antiqua manual. It will guide you through the successive steps leading to the making of a global paleogeographic reconstruction. The various tools of Terra Antiqua may also be used for more specific tasks (see <a href="Intro.html">Introduction</a>). 
 <br>The manual is organised according to an intuitive workflow we designed to make a global reconstruction. Throughout the process, you are provided with guiding tips for each algorithm and tool.
 </p>
