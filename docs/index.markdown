@@ -20,7 +20,9 @@ Terra Antiqua is available in the QGIS oficial respository. To install the plugi
 
  ## Sample data
 you can download the sample data bundle for Terra Antiqua here:
+
 <p><a href="https://drive.google.com/drive/folders/141FTATSGFGStOdPeE8i4PNTuEf7ZV49X?usp=sharing"> sample data</a></p>. 
+
 This set of files enables to get familiar with Terra Antiqua and the use of its various tools. It is intended to provide an example of reconstruction and of the format of the input files. The full list with descriptions is available in the User's Manual.
  ### Please download the whole folder "TA_sample_data_bundle" as it is.
 
