@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="post">
+
+    
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {%- if page.working -%}
+       <div class="working"><img style="width:15%"src= "assets/images/Road-sign-works.png" alt="Work in progress">
+           <p style="text-align:center"><b>Page under construction</b>
+           <br>We can't guarantee the accuracy of this information.
+           <br>If you have questions please contact us by leaving a comment below.
+           <br><i>Once we're done this message will be away.</i></p>
+           </div>
+    {%- endif -%}
+  </header>
+      
+    {{ content }}
+    
+
+</article>
+
+
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
+
+
