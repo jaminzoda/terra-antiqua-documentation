@@ -1,8 +1,6 @@
 ---
 layout: tool
 title: Create Topo-/Bathymetry
-icon: {{site.baseurl}}/assets/images/icon_create_tb.png
-working: false
 ---
 <html>
 <head>
@@ -10,7 +8,14 @@ working: false
 </head>
 <title> Create Topography / Bathymetry </title>
 
+   
 <body>
+    <!-- icon: {{site.baseurl}}/assets/images/icon_create_tb.png
+working: false -->
+    <div class="icon-container">
+                <img width="10%" src="{{site.baseurl}}/assets/images/icon_create_tb.png"
+                alt="Icon Create Topo-/Bathymetry"></div>
+    
   <p>  Terra Antiqua also offers the possibility to generate new geographic features when present day features can not be used (e.g. reconstructions of some mountains or basins that have disappeared).
         <br>This tool creates new topography or bathymetry in the DEM for the area defined by a polygon/mask prepared in a shapefile on QGIS.
         <p>The user can define several parameters that control the geometry and characteristics of the new features.
