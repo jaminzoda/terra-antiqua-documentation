@@ -1,8 +1,6 @@
 ---
 layout: tool
 title: Remove Artefacts
-icon: {{site.baseurl}}/assets/images/icon_remove_arts.png
-working: false
 ---
 <html>
     <head>
@@ -11,6 +9,11 @@ working: false
     <title> Removing artefacts </title>
     
     <body>
+        <!-- icon: {{site.baseurl}}/assets/images/icon_remove_arts.png
+working: false -->
+        <div class="icon-container">
+                    <img width="10%" src="{{site.baseurl}}/assets/images/icon_remove_arts.png"
+                    alt="Icon remove artefacts"></div>
         <p>Artefacts can be inherited from the input data sources or introduced to the map during the raster processing within the framework of Terra Antiqua. For example, filling gaps by interpolation can cause some abnormally high or low values that need to be removed.
         <p>Remove Artefacts is designed to remove the artefacts present in the data or introduced during different processing steps from the DEM raster. A big advantage of this tool is that polygons are drawn by the user to specify the area where artefacts will be removed. If needed, more polygons can be drawn.
         <div class="technical-details">
