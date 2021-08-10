@@ -44,7 +44,7 @@ This homepage contains the index of the manual and general information about dow
 <div>
 
     <ul><li><div style="background-color: #e6b8af"> 
-       <b>WARNINGS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_warning.png"
+       <b>WARNINGS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/Icon_warning.png"
        alt="recommendation">: critical information for the correct use of the tool avoiding errors.
     </div></li>
    
@@ -53,7 +53,7 @@ This homepage contains the index of the manual and general information about dow
        </div></li>
     
     <li><div style="background-color: #b6d7a8"> 
-       <b>GUIDING TIPS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_tip.png"
+       <b>GUIDING TIPS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/Icon_tip.png"
        alt="recommendation">: recommendations about when and how to use the tool, or additional information about the algorithm.
     </div></li></ul>
     <p>Besides, embeded in the description of each tool, you will find a section on:</p>
@@ -75,7 +75,7 @@ Terra Antiqua v1.0.1 has been tested on (we thus recommend these versions or hig
 
 ---
 ## Installation
-To install the plugin follow these steps: Open QGIS main window --> Plugins --> Manage and install plugins (see screenshot below) … --> All --> Search for <i>Terra Antiqua</i> --> Install plugin.
+To install the plugin follow these steps: Open QGIS main window --> Plugins --> Manage and install plugins... (see screenshot below) --> All --> Search for <i>Terra Antiqua</i> --> Install plugin.
 <p>
 <img src="{{site.baseurl}}/assets/images/install_plugins.png" alt="Screenshot_QGIS_plugin repository">
 </p>
