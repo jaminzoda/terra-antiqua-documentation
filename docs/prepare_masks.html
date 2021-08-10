@@ -1,8 +1,6 @@
 ---
 layout: tool
 title: Prepare Masks
-icon: {{site.baseurl}}/assets/images/icon_prepare_masks.png
-working: false
 ---
 <html>
     <head>
@@ -11,7 +9,11 @@ working: false
     <title> Prepare masks </title>
     
 <body>
-    
+    <!-- icon: {{site.baseurl}}/assets/images/icon_prepare_masks.png
+working: false -->
+    <div class="icon-container">
+            <img width=10%" src="{{site.baseurl}}/assets/images/icon_prepare_masks.png"
+            alt="Icon Prepare Masks"></div>
     <p>Vector polygon masks stored in shapefiles play a central role in Terra Antiqua because they control the area where topography and bathymetry are modified/created, and they can also contain attributive information used by Terra Antiqua’s algorithms.<br>
     Often, Gplates works not only with polygons but also polylines to represent the masks. Then the output consists of separate shapefiles.
     <div class="technical-details">
