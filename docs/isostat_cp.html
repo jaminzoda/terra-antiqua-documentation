@@ -1,8 +1,6 @@
 ---
 layout: tool
 title: Isostatic Compensation
-icon: {{site.baseurl}}/assets/images/icon_std_proc.png
-working: false
 ---
 
 <html>
@@ -12,6 +10,11 @@ working: false
     <title> Isostatic compensation </title>
     
     <body>
+        <!-- icon: {{site.baseurl}}/assets/images/icon_std_proc.png
+working: false -->
+        <div class="icon-container">
+                   <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
+                   alt="Icon Std Processing"></div>
         <p>
         The poles' topography depends on the presence, extent, and thickness of ice sheets and their associated isostatic effects. If the reconstruction corresponds to a warmer period, one must isostatically compensate for the ice loss on Greenland or Antarctica.
         This tool compensates for the absence of ice mass in the poles. The DEM values will be modified in the areas where there is a noticeable difference between ice and bedrock topography. The percentage of ice to be removed from the polar regions must be defined. The higher it is, the stronger the isostatic rebound, and the higher the resulting topography will be.</p>
@@ -34,7 +37,7 @@ working: false
            <ol>
                <li> <p> Click on the icon <div2 class="icon-container">
                    <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
-                   alt="Icon Set Paleoshorelines"></div2>. The Standard Processing window will pop up.</p></li>
+                   alt="Icon Std processing"></div2>. The Standard Processing window will pop up.</p></li>
                   
                <li><p> In the field <b><i>How would you like to process the input DEM</i></b>, choose <b><i>Isostatic Compensation</i></b>.</p>
                    <div2 class= "icon-container">
