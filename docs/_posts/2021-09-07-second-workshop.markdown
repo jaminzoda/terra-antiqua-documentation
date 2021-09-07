@@ -12,7 +12,7 @@ Thank you all for your interest in the workshop on Terra Antiqua that we organis
 Here are the details:
 ### Wednesday Sept 15, 16h (UTC+2)
 Zoom link:
-<a href="https://univ-rennes1-fr.zoom.us/j/92864555931">https://univ-rennes1-fr.zoom.us/j/92864555931</a>
+<a href="https://univ-rennes1-fr.zoom.us/j/92864555931"> https://univ-rennes1-fr.zoom.us/j/92864555931 </a>
 ### Meeting ID: 928 6455 5931
 ### Passcode: 483882
 
