@@ -27,7 +27,7 @@ The exercise is on <a href="https://docs.google.com/document/d/10zRGOljvevSipeq9
 
 Before this workshop, you need to:
 - install QGIS (v3.10 or higher)
-- install the plugin Terra Antiqua (to be done on QGIS directly, see <i>Installation</i> above)
+- install the plugin Terra Antiqua (to be done on QGIS directly, see <i>Installation</i> in the <a href="https://jaminzoda.github.io/terra-antiqua-documentation/">homepage</a>)
 - download the sample data bundle and open it with QGIS (see section <i><a href="https://jaminzoda.github.io/terra-antiqua-documentation/sample_data.html"> Sample Data Bundle</a></i> in this website).
 
 Installation guidelines, the user’s manual and the sample data bundle are available in this website.
