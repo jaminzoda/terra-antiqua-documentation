@@ -66,9 +66,9 @@ At the end of each page, you will find a text filed where you can comment on the
 <p>You may also use <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"><b>this contact form</b></a>.</p>
 ---
 ## Compatibility: QGIS 3.10 or higher
-Terra Antiqua v1.0.1 has the same technical requirements as QGIS 3.10 (Windows 7, 8, or 10; Linux, MacOS High Sierra 10.13 or higher)
+Terra Antiqua v1.0.2 has the same technical requirements as QGIS 3.10 (Windows 7, 8, or 10; Linux, MacOS High Sierra 10.13 or higher)
 
-Terra Antiqua v1.0.1 has been tested on (we thus recommend these versions or higher):
+Terra Antiqua v1.0.2 has been tested on (we thus recommend these versions or higher):
 
 **OS**: Windows 10 (20H2), Mac OS Big Sur 11.2, Linux Ubuntu (20.04) <br>
 **QGIS version**: 3.10.14 _A Coruña_
