@@ -26,7 +26,7 @@ baseurl: "/terra-antiqua-documentation/" # the subpath of your site, e.g. /blog
 url: "https://jaminzoda.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: terra_antiqua
 github_username:  jaminzoda
-facebook: TerraAntiqua.Qgis
+facebook_username: TerraAntiqua.Qgis
 author: Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet
 
 # Build settings
