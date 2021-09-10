@@ -55,7 +55,7 @@ header_pages:
     - sample_data.html
     - how_to.html
     - troubleshooting.html
-    - Developpers.html
+    - Developers.html
     - Licences.html
     
 # Excluded items can be processed by explicitly listing the directories or
