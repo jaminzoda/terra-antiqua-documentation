@@ -32,7 +32,7 @@ This homepage contains the index of the manual and general information about dow
 | <a href="sample_data.html">***Sample Data Bundle***</a>| <a href="set_sl.html">Set New Sea Level<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 |<a href="how_to.html"> ***How-to...*** </a>| <a href="calc_bathy.html">Calculate Bathymetry<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 |<a href="troubleshooting.html"> ***Troubleshooting***</a>|  <a href="copy_paste.html">Copy / Paste Raster<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
-|<a href="Developpers.html"> ***Info for Developpers***</a>|  <a href="change_symbology.html">Change Map Symbology<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
+|<a href="Developers.html"> ***Info for Developers***</a>|  <a href="change_symbology.html">Change Map Symbology<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 
 ---
 <p><br></p>
