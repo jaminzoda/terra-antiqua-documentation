@@ -24,12 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
     This is the web version of the manual and the documentation for Terra Antiqua (v1.0) - a QGIS plugin for paleogeographic reconstructions.
 baseurl: "/terra-antiqua-documentation/" # the subpath of your site, e.g. /blog
 url: "https://jaminzoda.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: terra_antiqua
-github_username:  jaminzoda
-facebook_username: TerraAntiqua.Qgis
-
-youtube: Terra Antiqua
-youtube_channel: UCdYwTfKb0IoH2l0M5QsId6w
+social_links:
+    twitter_username: terra_antiqua
+    github_username:  jaminzoda
+    facebook_username: TerraAntiqua.Qgis
+    youtube_username: UCdYwTfKb0IoH2l0M5QsId6w
 
 
 author: Diego Ruiz, Jovid Aminov, Guillaume Dupont-Nivet
