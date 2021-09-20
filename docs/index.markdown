@@ -32,7 +32,7 @@ This homepage contains the index of the manual and general information about dow
 | <a href="sample_data.html">***Sample Data Bundle***</a>| <a href="set_sl.html">Set New Sea Level<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 |<a href="how_to.html"> ***How-to...*** </a>| <a href="calc_bathy.html">Calculate Bathymetry<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 |<a href="troubleshooting.html"> ***Troubleshooting***</a>|  <a href="copy_paste.html">Copy / Paste Raster<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
-|<a href="Developpers.html"> ***Info for Developpers***</a>|  <a href="change_symbology.html">Change Map Symbology<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
+|<a href="Developers.html"> ***Info for Developers***</a>|  <a href="change_symbology.html">Change Map Symbology<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="8%"/></a>
 
 ---
 <p><br></p>
@@ -44,7 +44,7 @@ This homepage contains the index of the manual and general information about dow
 <div>
 
     <ul><li><div style="background-color: #e6b8af"> 
-       <b>WARNINGS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/Icon_warning.png"
+       <b>WARNINGS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_warning.png"
        alt="recommendation">: critical information for the correct use of the tool avoiding errors.
     </div></li>
    
@@ -53,7 +53,7 @@ This homepage contains the index of the manual and general information about dow
        </div></li>
     
     <li><div style="background-color: #b6d7a8"> 
-       <b>GUIDING TIPS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/Icon_tip.png"
+       <b>GUIDING TIPS</b> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_tip.png"
        alt="recommendation">: recommendations about when and how to use the tool, or additional information about the algorithm.
     </div></li></ul>
     <p>Besides, embeded in the description of each tool, you will find a section on:</p>
