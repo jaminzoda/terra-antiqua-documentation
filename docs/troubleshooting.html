@@ -72,17 +72,17 @@ working: true
         <td>Compile Topo/Bathymetry</td>
         </tr>
     <tr>
-        <td colspan="2">After using the <i>Compile Topo/Bathymetry</i> tool, small artefacts appear in areas where there is a gap within the topography raster. These artefacts consist of parts of the bathymetry raster underlying those areas that are kept by the algorithm because they do not correspond to the perimeter of any continental block polygon and are thus not covered by the buffer when the option to <a href="compile_tb.html#remove-overlap">remove overlapping bathymetry</a> is selected. These gaps are not related to the rotation of the continental blocks and their overlapping because they are within a tectonic plate and not between two plates. In fact, the overlapping bathymetry that that lies over the boundary of two tectonic blocks is recognised and erased by the algorithm.
+        <td colspan="2">After using the <i>Compile Topo/Bathymetry</i> tool, small artefacts appear in areas where there is a gap within the topography raster. The <a href="compile_tb.html#remove-overlap">remove overlapping bathymetry</a> option is not working porperly. These artefacts consist of parts of the bathymetry raster underlying those areas that are kept by the algorithm because they do not correspond to the perimeter of any continental block polygon and are thus not covered by the buffer when the option to <a href="compile_tb.html#remove-overlap">remove overlapping bathymetry</a> is selected. These gaps are not related to the rotation of the continental blocks and their overlapping because they are within a tectonic plate and not between two plates. The overlapping bathymetry that that lies over the boundary of two tectonic blocks is correctly recognised and erased by the algorithm.
         <br>
             <img src="{{site.baseurl}}/assets/images/issue_compile_tb.png" alt="some_overlapping_bathymetry_left">
                 <br>
-        This is not a bug of Terra Antiqua. We have noticed that GPlates erases the pixel values equal to 0 when the present-day topography raster is rotated. This creates gaps in the topography raster for areas that have an elevation equal to 0 and are located within a continental block (e.g.: Bahamas, northern and western shores of the Gulf of Mexico)</td>
+        This is not a bug of Terra Antiqua. We have noticed that GPlates erases the pixel values equal to 0 (and replaces these with No Data values) when the present-day topography raster is rotated. This creates gaps in the topography raster for areas that have an elevation equal to 0 and are located within a continental block (e.g.: Bahamas, northern and western shores of the Gulf of Mexico)</td>
         <td>Use the tool <a href="remove_arts.html">Remove Artefcts</a> to remove those artefacts from the compiled raster.</td>
         <td>Compile Topo/Bathymetry</td>
         </tr>
     </table>
 
-<div class="technical-details"><p> If you are a developper and think of a technical solution to any of these issues, please refer to the section <a href="developers.html#contributions">Contributions</a>.</p></div>
+<div class="technical-details"><p> If you are a developper and think of a technical solution to any of these issues, please refer to the section <a href="Developers.html#contributions">Contributions</a>.</p></div>
     <div class="note"><p>To suggest new issues to add to the list, or give feedback on the ones already there, please comment below or fill in this form:<a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"> Feedback & bug reports</a>.
     </p>
 </div>
