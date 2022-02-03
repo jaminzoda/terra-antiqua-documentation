@@ -58,12 +58,12 @@ working: false -->
                    <ul><li><b><i> Interpolation</i></b>: all values to be emerged/submerged by the algorithm will be erased, leaving empty spaces. The elevation and bathymetry values for the erased pixels  will subsequently be interpolated from adjacent pixels.
                        The shoreline (elevation=0) will be fixed to the polygons’ perimeter during the whole process.
                        This mode will also interpolate over any gap (NoData values) in the DEM.
-                   
+                   </br>
                    <div class="note">
                   
                    <p>
                        <i>Interpolation</i> modification mode might create artefacts along the shorelines, depending on the source data used (topography, bathymetry, rotation model, etc.). If you have this issue with your reconstruction, please visit the <a html="troubleshooting.html#smoothing_interp_issue">Troubleshooting</a> section.</p></div>
-                   
+                   </br>
                    </li>
                    <li> <p><b><i>Rescaling</i></b>: the originally submerged values will be linearly rescaled between 0.1 m and the elevation you enter. For the newly submerged areas, the originally emerged values will be linearly rescaled between -0.1 m and the depth you enter.
                    
