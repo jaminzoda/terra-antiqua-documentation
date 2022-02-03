@@ -87,9 +87,9 @@ working: true
     <tr>
         <td><section id="smoothing_interp_issue">When using the <a href="set_pls.html#modification_mode"><i>interpolation mode</i></a> in the <i>Set Paleoshorelines</i> tool, some shorelines may show artefacts such as large patches of 0 elevation pixels or distorted shorelines. Especially for isthms or peninsulas, this can sometimes turn them into islands.</section>
             <br>
-            <!-- need to make this figure -->   <img src:"{{site.baseurl}}/assets/images/issue_compile_tb.png" alt="image_of_shoreline_artefcts">
+      <img src="{{site.baseurl}}/assets/images/issue_pls_interp.png" alt="image_of_shoreline_artefacts">
         </td>
-        <td> This is due to the fact that the algorithm sets the shorelines fixed to the polygons edge. Depending on the source data (i.e.: the topography, bathymetry, rotation model, etc.), there might be regions where the interpolation has to cover large areas with no preexisting data to work from. In those regions, it is likely to see artefacts.</td>
+        <td> This is due to the fact that the algorithm sets the shorelines fixed to the polygons edge, creating a "rim" of 0 elevation pixels. Depending of the resolution of the map and the source data (i.e.: the topography, bathymetry, rotation model, etc.) there are regions where the interpolation is likely to generate artefacts. </td>
 
         <td>Use the tool <a href="remove_arts.html">Remove Artefcts</a> to remove those artefacts from the shorelines.
             <p></br></p>
