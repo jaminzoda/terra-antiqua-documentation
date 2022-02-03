@@ -1,6 +1,7 @@
 ---
 layout: tool
 title: Set Paleoshorelines
+working: true
 ---
 <html>
     <head>
@@ -19,13 +20,13 @@ working: false -->
         
         <p>
         
-        This can be a time-consuming operation depending on the area covered and the level of detail to be obtained. You can also use already prepared files of polygons of shorelines integrating several other sources of data. We propose a set for various ages that were already built that are included in the data bundles (see paleoshoreline files in “Sample data”). Other shoreline estimates may be obtained in the literature  (e.g. Golonka et al. 2006) but will require rotating using GPlates with careful adjustments of the tectonic block rotation models and checking of recent fossil data.
+        This can be a time-consuming operation depending on the area covered and the level of detail to be obtained. You can also use already prepared files of polygons of shorelines integrating several other sources of data. We propose a set for various ages that were already built that are included in the data bundles (see paleoshoreline files in <a href="sample_data.html"> Sample data</a>). Other shoreline estimates may be obtained in the literature  (e.g. Golonka et al. 2006) but will require rotating using GPlates with careful adjustments of the tectonic block rotation models and checking of recent fossil data.
         
         <div class="technical-details">
         <p>Setting paleoshorelines is a simple reassignment of pixel values based on their position relative to the shorelines of the time of reconstruction.
         If a pixel with a positive elevation value is outside the paleoshoreline polygon, its value will be modified to submerge it. Conversely, a pixel inside the polygon that has a negative value will be brought above sea level.
        </p> </div>
-       <p> Pixel value reassignment is performed using two alternative approaches: interpolation or rescaling. When choosing interpolation, all positive elevation values outside the paleoshoreline polygons are removed and then interpolated from adjacent pixels. The same is done for the negative values inside the polygons. However, this simple processing may lead to a loss of the original pattern along the shorelines such that the rescaling approach has been developed. In the case of rescaling, the pixel values to be modified are linearly rescaled between 0.1 and the maximum defined by the user. When submerging, it is rescaled between -0.1 and the minimum specified by the user.</p>
+       <p> Pixel value reassignment is performed using two alternative approaches: <b>interpolation</b> or <b>rescaling</b>. When choosing interpolation, all positive elevation values outside the paleoshoreline polygons are removed and then interpolated from adjacent pixels. The same is done for the negative values inside the polygons. However, this simple processing may lead to a loss of the original pattern along the shorelines such that the rescaling approach has been developed. In the case of rescaling, the pixel values to be modified are linearly rescaled between 0.1 and the maximum defined by the user. When submerging, it is rescaled between -0.1 and the minimum specified by the user.</p>
        
        <div class="note">
           <p> Note that this tool will be applied to the entire file. If you want to apply it to a limited area only you can export to a new file a rectangular section of the map with QGIS (in the layer window right click on the raster file name and choose <i>“export > save as...”</i> to select the rectangular area). Then apply the tool to this new file. However, if you have global topo/bathymetry data, it is easier to first run this tool globally and then cut a rectangular section as described above.</p>
@@ -53,11 +54,19 @@ working: false -->
                           alt="recommendation"><p> The polygons can be taken from published sources (e.g: Golonka, 2006), but they should be adapted and modified following fossil occurrences and/or other geological data.</p></div>
                    <p><br></p>
                    
-                   <li><p> Choose the modification mode.</p>
-                   <ul><li><b><i> Interpolation</i></b>: all values to be emerged/submerged by the algorithm will be erased, leaving empty spaces. The elevation and bathymetry values for the erased pixels  will subsequently be interpolated from adjacent pixels. The shoreline (elevation=0) will be fixed to the polygons’ perimeter during the whole process.This mode will also interpolate over any gap (NoData values) in the DEM.</li>
-
+                   <li><p> <section id="modification_mode">Choose the modification mode.</section></p>
+                   <ul><li><b><i> Interpolation</i></b>: all values to be emerged/submerged by the algorithm will be erased, leaving empty spaces. The elevation and bathymetry values for the erased pixels  will subsequently be interpolated from adjacent pixels.
+                       The shoreline (elevation=0) will be fixed to the polygons’ perimeter during the whole process.
+                       This mode will also interpolate over any gap (NoData values) in the DEM.
+                   
+                   <div class="note">
+                  
+                   <p>
+                       <i>Interpolation</i> modification mode might create artefacts along the shorelines, depending on the source data used (topography, bathymetry, rotation model, etc.). If you have this issue with your reconstruction, please visit the <a html="troubleshooting.html#smoothing_interp_issue">Troubleshooting</a> section.</p></div>
+                   
+                   </li>
                    <li> <p><b><i>Rescaling</i></b>: the originally submerged values will be linearly rescaled between 0.1 m and the elevation you enter. For the newly submerged areas, the originally emerged values will be linearly rescaled between -0.1 m and the depth you enter.
-                    
+                   
                        <div class="warning">
                        <div1 class= "icon-container">
                            <img <div1 class= "icon-container">
@@ -65,9 +74,8 @@ working: false -->
                            alt="warning">
                            
                        <p>
-                           <i>Rescaling</i> modification mode is not recommended if you have used the option to <i>Remove overlapping bathymetry</i> in the <a href="compile_tb.html#remove_overlap">Compile Topo- Bathymetry tool<div2 class="icon-container">
-        <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_compile_tb.png"
-        alt="icon_compile_topo/bathy"></div2></a> since it will not fill in the blanks left around the continental blocks.     </p></div></li></ul></p>
+                           <i>Rescaling</i> modification mode is not recommended if you have used the option to <i>Remove overlapping bathymetry</i> in the <a href="compile_tb.html#remove_overlap">Compile Topo- Bathymetry tool<div2 class="icon-container"> <img class="tool-icon" src="{{site.baseurl}}/assets/images/icon_compile_tb.png" alt="icon_compile_topo/bathy"></div2></a> since it will not fill in the blanks left around the continental blocks.</br>
+                           If you want to use this modification mode regardles, you should fill these blanks before using <a href="fill_gaps.html">Fill gaps</a>.</p></div></li></ul></p>
 
                     
                     <li>

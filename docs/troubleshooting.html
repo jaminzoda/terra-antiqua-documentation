@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubleshooting
-working: false
+working: true
 ---
 <html>
 <head>
@@ -83,6 +83,18 @@ working: false
         This is not a bug of Terra Antiqua. We have noticed that GPlates erases the pixel values equal to 0 (and replaces these with No Data values) when the present-day topography raster is rotated. This creates gaps in the topography raster for areas that have an elevation equal to 0 and are located within a continental block (e.g.: Bahamas, northern and western shores of the Gulf of Mexico)</td>
         <td>Use the tool <a href="remove_arts.html">Remove Artefcts</a> to remove those artefacts from the compiled raster.</td>
         <td>Compile Topo/Bathymetry</td>
+        </tr>
+    <tr>
+        <td><section id="smoothing_interp_issue">When using the <a href="set_pls.html#modification_mode"><i>interpolation mode</i></a> in the <i>Set Paleoshorelines</i> tool, some shorelines may show artefacts such as large patches of 0 elevation pixels or distorted shorelines. Especially for isthms or peninsulas, this can sometimes turn them into islands.</section>
+            <br>
+            <!-- need to make this figure -->   <img src:"{{site.baseurl}}/assets/images/issue_compile_tb.png" alt="image_of_shoreline_artefcts">
+        </td>
+        <td> This is due to the interpolation and to the fact that the algorithm sets the shorelines fixed to the polygons edge. Depending on the source data (i.e.: the topography, bathymetry, rotation model, etc.), there might b e regions where the interpolation has to cover large areas with no preexisting data to work from. In those regions, it is likely to see artefacts at the shorelines.</td>
+
+        <td>Use the tool <a href="remove_arts.html">Remove Artefcts</a> to remove those artefacts from the shorelines.</br>or</br>
+            Run the Set Paleoshorelines tool with the <a href="set_pls.html#modification_mode">Rescaling mode</a>.
+        </td>
+        <td>Set Paleoshorelines</td>
         </tr>
     </table>
 
