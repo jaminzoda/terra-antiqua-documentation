@@ -32,7 +32,7 @@ experimental: true -->
 <ul>
     <li>The time of the age raster is 0 Ma</li>
     <li>The time of reconstruction is 30 Ma</li>
-    <li>For the Ocean age used in the formula above, the time of reconstruction (30Ma) is subtracted from the value of the ocean age raster.</li>
+    <li>For the Ocean age used in the formula above, the time of reconstruction (30Ma) is subtracted from the pixel values of the ocean age raster.</li>
     </ul>
 
 <p><b>Case 2</b>: The raster contains age values for each pixel expressed relative to the time of the reconstruction (30Ma) and the position of the continents corresponds to 30 Ma</p>
@@ -40,14 +40,14 @@ experimental: true -->
 <ul>
     <li>The time of the age raster is 30 Ma</li>
     <li>The time of reconstruction is 30 Ma</li>
-    <li>For the Ocean age used in the formula above, the value of the ocean age raster is used directly.</li>
+    <li>For the Ocean age used in the formula above, the pixel values of the ocean age raster are used directly.</li>
     </ul>
 
 <p><b>Case 3</b>: The raster contains age values for each pixel expressed relative to a time that doesn’t correspond to the reconstruction (e.g.: 20 Ma) and the position of the continents corresponds to 30 Ma</p>
 <ul>
     <li>The time of the age raster is 20 Ma</li>
     <li>The time of reconstruction is 30 Ma</li>
-    <li>For the Ocean age used in the formula above, first the difference between the time of reconstruction and the time of the age raster is calculated. Then the resulting value is subtracted from the value of the ocean age raster. The result is used in the formula above.</li>
+    <li>For the Ocean age used in the formula above, first the difference between the time of reconstruction and the time of the age raster is calculated. Then the resulting value is subtracted from the pixel values of the ocean age raster. The result is used in the formula above.</li>
     </ul>
 
 <h2>Step-by-step</h2>
@@ -63,7 +63,7 @@ experimental: true -->
                <img src="{{site.baseurl}}/assets/images/GUI_calc_bathy.png"
                alt="GUI_calculate bathymetry"></div2></li>
 
-           <li><p> In the field <b><i>Raster to be modified</i></b>, choose the present-day ocean age gri rotated to the time of reconstruction.</p></li>
+           <li><p> In the field <b><i>Raster to be modified</i></b>, choose the present-day ocean age grid rotated to the time of reconstruction.</p></li>
            
            <li><p> In the field <b><i>Time of the age raster</i></b>, enter the time the age values of the raster are expressed relative to.</p></li>
            <li><p> In the field <b><i>Reconstruction time</i></b>, enter the time of reconstruction in Ma.</p></li>

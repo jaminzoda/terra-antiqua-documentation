@@ -28,7 +28,7 @@ working: false -->
         <i>Hc</i> - Compensated elevation (new elevation value) <br/>
         <i>Hi</i> - Initial elevation<br/>
         <i>Hd</i> - Elevation difference between the bedrock and ice topographies (ice thickness)<br/>
-        <i>Ir</i> - Removed amount of ice (in %)
+        <i>Ir</i> - Amount of ice removed (in %)
         </p>
         </div>
        
@@ -57,7 +57,7 @@ working: false -->
                     If you don’t want this tool to work in the entire map, you have the option to constrain the isostatic compensation to particular regions. You need to select a <b><i>Mask layer</b></i>. If you don’t want to use all polygons in the <b><i>Mask layer</b></i>, there are two ways to choose which ones to use.</p>
                     <ul><li><p>You may select the polygons you want the compensation to be constrained to on the map canvas. In this case, check the box <i><b>Selected features only</b></i>.</p></li>
                         <li>
-                            <p>If the regions you want to limit the compensation to are Greenland and Antarctica, you don’t need to select manually the tectonic plates. You can check the box <i><b>Get polar regions automatically</b></i>. In this case, the tool will search for the names of polar continental plates automatically and use only these for the isostatic compensation. Make sure your shapefile has an attribute field called <b>NAME</b> with the names of the tectonic plates.</p>
+                            <p>If the regions you want to limit the compensation to are Greenland and Antarctica, you don’t need to select manually the tectonic plates. You can check the box <i><b>Get polar regions automatically</b></i>. In this case, the tool will search for the names of polar continental plates in the mask layer automatically and use only these for the isostatic compensation. Make sure your shapefile has an attribute field called <b>NAME</b> with the names of the tectonic plates.</p>
     
                             <div class="tip"> <div1 class= "icon-container">
                                 <img class="warning-tip-icon" src="{{site.baseurl}}/assets/images/icon_tip.png" alt="recommendation">
