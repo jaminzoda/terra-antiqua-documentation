@@ -4,6 +4,7 @@
 .versioning {
     border: 3px solid #00468c;
     background-color: #00008c;
+    width: 100%;
     padding: 4px;
     display: flex;
 }
