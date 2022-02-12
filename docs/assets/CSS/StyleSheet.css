@@ -1,6 +1,16 @@
 ---
 
 ---
+.versioning {
+    border: 3px solid #00468c;
+    background-color: #00008c;
+    padding: 4px;
+    display: flex;
+}
+.versioning p {
+    text-align: justify;
+    color: white;
+}
 .working {
     border: ;
     background-color: #4d0000;
