@@ -2,6 +2,8 @@
 layout: tool
 title: Smooth Raster
 working: true
+versions: true
+version: Version 1.1
 ---
 <html>
     <head>
@@ -15,6 +17,7 @@ working: false -->
         <div class="icon-container">
                      <img width="10%" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
                      alt="Icon Standard Processing tools"></div>
+        <p style="text-align:right"> <i><a href= "change_symbology.html">Version 1.0</a></i></p>
         <p>
         To avoid sharp boundaries between the modified and created geographic features, one may also want to smooth the raster. This tool is designed to reduce abrupt elevation changes in a DEM by averaging the values around each pixel.</p>
        <div class="technical-details"><p> The tool <i>Smooth Raster</i> uses filtering, a technique that is widely used in digital image processing. A kernel window defined by the smoothing factor is placed on the raster. Thevalue of the central pixel is then calculated by <br>(1) multiplying the values of the kernel and the raster, and <br>(2) summing all the resulting values. <br>Then the kernel window is moved by one pixel to calculate the value of the next pixel.<br>We propose Uniform mean or Gaussian low-pass filters that have slightly different characteristics (see these links provided in the step by step below).
