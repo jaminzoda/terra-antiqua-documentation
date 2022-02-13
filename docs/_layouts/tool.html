@@ -29,10 +29,9 @@ layout: default
             {%- endif -%}
             {%- if page.versions -%}
             <div class="versioning">
-                   <p style="text-align:center"><b>The information on this page has been updated for Version 1.1</b>
-                   <br>If you are using a previous version of Tera Antiqua, please refer to the correct version of this page:
-                   <br><i><a href= "change_symbology.html">Version 1.0</a></i>
-                   <br>If you have questions please contact us by leaving a comment below.
+                   <p style="text-align:center"><b>The information on this page has been updated for Version {{ page.version | escape }} </b>
+                   <br>If you are using a previous version of Tera Antiqua, please select it below.
+                   <br>If you have questions feel free to contact us.
                    </p>
                    </div>
             {%- endif -%}
