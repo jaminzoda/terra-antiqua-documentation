@@ -2,7 +2,7 @@
 layout: tool
 title: Fill gaps
 working: true
-versions: true
+versioning: true
 version: Version 1.1
 ---
 <html>
@@ -17,7 +17,7 @@ working: false -->
         <div class="icon-container">
                     <img width="10%" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
                     alt="Icon Standard Processing tools"></div>
-        <p style="text-align:right"> <i><a href= "change_symbology.html">Version 1.0</a></i></p>
+        <p style="text-align:right"> <i><a href= "fill_gaps.html">Version 1.0</a></i></p>
        <p>Some areas may end up missing elevation values. This issue is common for paleogeographic maps because, after rotating present-day topography / bathymetry, gaps can appear between blocks. These gaps represent areas where the topography / bathymetry was destroyed by deformation or subduction of a crust portion.
         <p>This tool is intended to interpolate values for these gaps. It generates elevation data in each empty pixel by averaging pixel values around it, using inverse distance weighting. There is the option to use it on the entire map or constrain it to a region.</p>
         <div class="technical-details"><p>The inverse distance weighting (IDW) interpolation method, implemented in the GDAL library, is a fast algorithm to fill the empty pixels (NoData values). The Fill gaps tool gets NoData values from the raster's metadata and seeks their position to be able to fill these areas, interpolating between the surrounding valid values.</p></div>
