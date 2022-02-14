@@ -1,6 +1,9 @@
 ---
 layout: tool
 title: Fill gaps
+working: true
+versioning: true
+version: Version 1.1
 ---
 <html>
     <head>
@@ -14,7 +17,8 @@ working: false -->
         <div class="icon-container">
                     <img width="10%" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
                     alt="Icon Standard Processing tools"></div>
-        <p>Some areas may end up missing elevation values. This issue is common for paleogeographic maps because, after rotating present-day topography / bathymetry, gaps can appear between blocks. These gaps represent areas where the topography / bathymetry was destroyed by deformation or subduction of a crust portion.
+        <p style="text-align:right"> <i><a href= "fill_gaps_v1.0.html">Version 1.0</a></i></p>
+       <p>Some areas may end up missing elevation values. This issue is common for paleogeographic maps because, after rotating present-day topography / bathymetry, gaps can appear between blocks. These gaps represent areas where the topography / bathymetry was destroyed by deformation or subduction of a crust portion.
         <p>This tool is intended to interpolate values for these gaps. It generates elevation data in each empty pixel by averaging pixel values around it, using inverse distance weighting. There is the option to use it on the entire map or constrain it to a region.</p>
         <div class="technical-details"><p>The inverse distance weighting (IDW) interpolation method, implemented in the GDAL library, is a fast algorithm to fill the empty pixels (NoData values). The Fill gaps tool gets NoData values from the raster's metadata and seeks their position to be able to fill these areas, interpolating between the surrounding valid values.</p></div>
         <p>For very large areas a more realistic outcome may be obtained by creating new topo/bathymetry using the tool  <a href="create_tb.html">Create Topo- / Bathymetry</a> <img style="width: 3%" src="{{site.baseurl}}/assets/images/icon_create_tb.png"
@@ -34,12 +38,16 @@ working: false -->
                        alt="GUI_Fill gaps"></div2></li>
        
                    <li><p> In <b><i>Raster to be modified</i></b>, choose the DEM you want to fill gaps in.</p></li>
+                   <li><p> In <b><i>Filling Type</i></b>, select how you want the algorithm to fill the gaps in your map.
+                       <ul><li><p> <b>Interpolation<b>: elevation values for empty pixels will be calculated interpolating from adjacent pixels using IDW.</p></li>
+                           <li><p> <b>Fixed Value</b>: all empty pixels are filled with the value entered in <b><i>Filling Value</i></b>.</p></li></ul>
                    
-                   <li> <p>If you have a set of masks you want to limit the interpolation to, check the box <b><i>Interpolate inside polygon(s) only</i></b>. In this case, you will have to select the layer containing these masks in the field below. If you want to fill the gaps in the full extent of the map, skip this step and leave the box unchecked.</p></li>
-                   <li><p>If you want to smooth the output raster once all gaps are interpolated, check the box <b><i>Smooth the resulting raster</i></b>, select a smoothing type, and a smoothing factor. Otherwise, skip this step.</p></li>
+                   <li> <p>If you have a set of masks you want to limit the interpolation to, check the box <b><i>Fill inside polygon(s) only</i></b>. In this case, you will have to select the layer containing these masks in the field below. If you want to fill the gaps in the full extent of the map, skip this step and leave the box unchecked.</p></li>
+                   
+                   <li><p> <section id="smooth-after-interpolation">If you want to smooth the output raster once all gaps are interpolated, check the box <b><i>Smooth the resulting raster</i></b>, select a smoothing type, and a smoothing factor. Otherwise, skip this step.</section></p></li>
                    <div class="note">
                          
-                         <p>If you have selected the option to <b><i>Interpolate inside polygon(s) only</i></b> in step 4, the smoothing will be constrained to the same polygon(s) as the interpolation.</p></div>
+                         <p>If you have selected the option to <b><i>Fill inside polygon(s)</i></b> in step 5, the smoothing will be constrained to the same polygon(s) as the interpolation.</p></div>
                    
                    <div class="note">
                        For details about raster smoothing, please refer to this page: <a href="smoothing.html"> Smooth raster</a>.</div>

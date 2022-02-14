@@ -1,6 +1,9 @@
 ---
 layout: tool
 title: Smooth Raster
+working: true
+versioning: true
+version: Version 1.1
 ---
 <html>
     <head>
@@ -14,10 +17,14 @@ working: false -->
         <div class="icon-container">
                      <img width="10%" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
                      alt="Icon Standard Processing tools"></div>
+        <p style="text-align:right"> <i><a href= "smoothing_v1.0.html">Version 1.0</a></i></p>
         <p>
         To avoid sharp boundaries between the modified and created geographic features, one may also want to smooth the raster. This tool is designed to reduce abrupt elevation changes in a DEM by averaging the values around each pixel.</p>
-       <div class="technical-details"><p> The tool <i>Smooth Raster</i> uses filtering, a technique that is widely used in digital image processing. A kernel window defined by the smoothing factor is placed on the raster. Thevalue of the central pixel is then calculated by <br>(1) multiplying the values of the kernel and the raster, and <br>(2) summing all the resulting values. <br>Then the kernel window is moved by one pixel to calculate the value of the next pixel.<br>We propose Uniform mean or Gaussian low-pass filters that have slightly different characteristics (see these links provided in the step by step below).
+       <div class="technical-details"><p> The tool <i>Smooth Raster</i> uses filtering, a technique that is widely used in digital image processing. A kernel window defined by the smoothing factor is placed on the raster. The value of the central pixel is then calculated by <br>(1) multiplying the values of the kernel and the raster, and <br>(2) summing all the resulting values. <br>Then the kernel window is moved by one pixel to calculate the value of the next pixel.<br>We propose Uniform mean or Gaussian low-pass filters that have slightly different characteristics (see these links provided in the step by step below). <!-- Will be better explained in the paper. When it is ready, we will be able to improve this explanation -->
         The only customization parameter is the smoothing factor, representing the radius (in pixels) given to the kernel window. The greater the factor, the smoother the resulting raster is.</p>
+        
+        <!-- This algorithms handles the boundaries automatically: if the raster covers
+           the entire globe, the raster is wrapped around to the opposite side. -->
         </div>
        
        <h2>Step-by-step</h2>
@@ -35,13 +42,17 @@ working: false -->
  
 
 <li><p> In <b><i>Raster to be modified</i></b>, choose the DEM you want to smooth the elevation from.</p></li>
-<li><p>Choose the <i><b>Smoothing type</b></i>: <i><b>Gaussian filter</b></i> or <i><b>Uniform filter</b></i>.</p></li>
+<li><p> You can choose to smooth only certain areas of the map by checking the box <b><i>Smooth inside polygon(s) only</i></b> and selecting the <b><i>Mask layer</i></b> to be used.<br>
+    You may choose only certain polygons of that layer checking <b><i>Selected features only</i></b>.</li>
+
+<li><p>Choose the <i><b>Smoothing type</b></i>: <i><b>Gaussian filter</b></i> or <i><b>Uniform filter</b></i>. </p></li>
+
+
 <div class="tip">
    <div1 class= "icon-container">
        <img class="warning-tip-icon" src="{{site.baseurl}}/assets/images/icon_tip.png"
        alt="recommendation">
-   <p>In this table we summarize the main characteristics of both smoothing types.
-   We also provide internet links and references.</p>
+   <p>In this table we provide internet links to the scipy website summarizing the main characteristics of both smoothing types.</p>
        </div>
 <table>
        <tr>
@@ -49,19 +60,40 @@ working: false -->
            <th><p>Uniform filter (a.k.a Mean filter)</p></th>
         </tr>
        <tr>
-           <th><p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter.html">Link to Scipy</a>
+           <th><p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter.html">Link to Scipy - Gaussian filter</a>
               </p></th>
-           <th><p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.uniform_filter.html?highlight=uniform_filter#scipy.ndimage.uniform_filter">Link to Scipy</a>
+           <th><p><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.uniform_filter.html?highlight=uniform_filter#scipy.ndimage.uniform_filter">Link to Scipy - Uniform filter</a>
         </tr>
 </table>
-           
-      
+
+<li><p>
+    You can enter the <b><i>smoothing factor</i></b> in the text field.</li>
+<li><p>
+    Alternatively, you can choose to retrieve it from the attribute table of the shapefile if there are different values for each mask.
+   
+    <p>This factor represents the radius around a given pixel that will be taken into consideration. The greater the number, the smoother will the resulting raster be.
+    <div class="note"> If you choose to retrieve the values for the smoothing factor from the attribute table but there are masks for which no value is specified there, the default value will be used. This is the number entered in the text field in step 6.</div>
+</li>
+
+  
+      <h3 style="text-align:center"><b>Advanced Parameters</b></h3>
+  
+<li><p>Since the smoothing algorithm averages values for pixels, the shorelines might be affected and slightly moved after using this tool.
+    <p>The option to <b><i>Set paleoshorelines fixed</i></b> solves this problem by runing the algorithm <a href="set_pls.html"><i>Set paleoshorelines</i></a> after the smoothing.<br>
+    For this you need to check the box and select the paleoshorelines layer.
+    
+   <div class="note"><p> If this option is activated, the <a href="set_pls.html#modification-mode">rescaling modification mode</a> is used with following parameters:<br>
+       Areas to submerge resacaled between -5 and 0 meters,<br>
+       Areas to emerge rescaled between 0 and 5 meters. </p></div></li>
+                         
 
 
 
 <li> Choose the <b><i>Output file path</b></i>, and click Run.</li>
 </ol>
-               
+        <div class="note"> <p>If the smoothing option is <a href="fill_gaps.html#smooth-after-interpolation"> selected from the <b>Fill gaps</b> tool</a>, the option to set back paleoshorelines is not available.</p></div>
+        
+
               
    </body>
     </html>
