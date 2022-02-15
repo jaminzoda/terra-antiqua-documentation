@@ -38,7 +38,7 @@ working: false -->
            
 <p>Most features made with this tool (such as inland seas and mountain ranges) will be closed/symmetrical (e.g.: an inland sea will be completely encircled with a shoreline) because the algorithm treats each pixel at the edge of the polygon equally.
 
-<p>By default, all preexisting values will be erased before created the new feature. However, there is an option (see step X below) to take into account these values if they are higher than the <i>mountain range</i> created or lower than the <i>sea</i> created.
+<p>By default, all preexisting values will be erased before created the new feature. However, there is an option (see <a href="create_tb.html#keep-preexisting">step 6</a> below) to take into account these values if they are higher than the <i>mountain range</i> created or lower than the <i>sea</i> created.
 <br/>This allows you to create features that are connected to existing ocean basins or mountain ranges, in a way that looks more realistic.
 
 <div class="technical-detils">
@@ -117,6 +117,8 @@ working: false -->
                    <img style="width:4%" src="{{site.baseurl}}/assets/images/property_override_button.png"
                    alt="icon_parameter_from_attribute_table"></div2> then select <i>field type</i> and finally choose the corresponding attribute field from the list.</div>
                <p><br></p>
+               <h3 style="text-align:center"><b>Advanced Parameters</b></h3>
+               <li><p> <section id="keep-preexisting">Choose to keep or not the preexisting higher topography (for mountain ranges) or deeper bathymetry (for ocean basins). <i>This is recommended if the features created are connected to existing mountains or oceans</i> </section> </p></li>
                 <li>
                <p> Choose the <b><i>Output file path</b></i>, and click Run.</li>
             
