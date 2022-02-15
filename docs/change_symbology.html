@@ -2,8 +2,9 @@
 layout: tool
 title: Change Map Symbology
 working: true
+experimental: false
 versioning: true
-version: Version 1.0
+version: Version 1.1
 ---
 <html>
 <head>
@@ -12,15 +13,14 @@ version: Version 1.0
 <title> Change Map Symbology </title>
 
 <body>
-    <!-- working: false
-icon: {{site.baseurl}}/assets/images/icon_std_proc.png
-experimental: false -->
+    <!-- icon: {{site.baseurl}}/assets/images/icon_std_proc.png -->
     <div class="icon-container">
                 <img width="10%" src="{{site.baseurl}}/assets/images/icon_std_proc.png"
                 alt="Icon Standard Processing Tools"></div>
-    <p style="text-align:right"> <i><a href: "change_symbology.html">Latest Version</a></i></p>
-
-  <p>This tool can be used to change the color palette of a map. The color schemes you may use in this tool are taken from the folder described <a href="color_palettes.html#folders">here</a>. Terra Antiqua is delivered with the color palettes described <a href="color_palettes.html#palette-list">here</a>.
+    
+    <p style="text-align:right"> <i><a href= "change_symbology_v1.0.html">Version 1.0</a></i></p>
+    
+  <p>This tool can be used to change the color palette of a map. Terra Antiqua is delivered with the color palettes described <a href="color_palettes.html#palette-list">here</a>. You may choose one of those or add another one.
 
   </p>
 
@@ -39,6 +39,10 @@ experimental: false -->
 
             <li><p> In <b><i>Raster to be modified</i></b>, choose the layer you want to change the symbology of.</p></li>
             <li> <p>Under the list <i><b>Color palette</b></i>, select the color scheme you want to apply to the map.</p></li>
+            <li><p> Go to <b><i>Add custom color palette</i></b> to add another color scheme.</p>
+                <div class="note">
+                   <p> Please remember that the color palettes must be in <b>.cpt</b> format. The name of the color palette that will be listed in Terra Antiqua should be added in the first line of the .cpt file, following a hashtag. </p></div>
+                </li>
             <li><p> Choose the <b><i>Output file path</b></i>, and click Run.</li>
         </ol>
 
