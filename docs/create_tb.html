@@ -1,6 +1,9 @@
 ---
 layout: tool
 title: Create Topo-/Bathymetry
+working: true
+versioning: true
+version: Version 1.1
 ---
 <html>
 <head>
@@ -15,7 +18,7 @@ working: false -->
     <div class="icon-container">
                 <img width="10%" src="{{site.baseurl}}/assets/images/icon_create_tb.png"
                 alt="Icon Create Topo-/Bathymetry"></div>
-    
+    <p style="text-align:right"> <i><a href= "create_tb_v1.0.html">Version 1.0</a></i></p>
   <p>  Terra Antiqua also offers the possibility to generate new geographic features when present day features can not be used (e.g. reconstructions of some mountains or basins that have disappeared).
         <br>This tool creates new topography or bathymetry in the DEM for the area defined by a polygon/mask prepared in a shapefile on QGIS.
         <p>The user can define several parameters that control the geometry and characteristics of the new features.
@@ -32,11 +35,21 @@ working: false -->
 <li><p>Finally, the entire area of the feature is interpolated to create a continuous elevation/depth values pattern.</p></li>
 </ol>
     </div>
+           
 <p>Most features made with this tool (such as inland seas and mountain ranges) will be closed/symmetrical (e.g.: an inland sea will be completely encircled with a shoreline) because the algorithm treats each pixel at the edge of the polygon equally.
+
+<p>By default, all preexisting values will be erased before created the new feature. However, there is an option (see step X below) to take into account these values if they are higher than the <i>mountain range</i> created or lower than the <i>sea</i> created.
+<br/>This allows you to create features that are connected to existing ocean basins or mountain ranges, in a way that looks more realistic.
+
+<div class="technical-detils">
+<p>This option adds an intermediate step between 1 and 2 above. The algorithm will check the pixel values beneath each of the randomly created points and, if they are higher than the elevation / lower than the depth to be  assigned to the point, this will keep its original value.</p></div>
+
+<!--
 <p>For mountains, in the case that the maximum elevation entered by the user is below the preexisting topography, this higher preexisting topography will remain untouched so that mountainous features can be kept for a realistic result. However, if you want to completely create new topography, you should enter a maximum higher than the preexisting maximum. If you want to keep elevation lower, you can also first remove the preexisting topography with the use of the <a href="remove_arts.html">Remove Artefacts<img src="{{site.baseurl}}/assets/images/icon_remove_arts.png" alt="icon_remove artefacts" width="3%"/></a>. Alternatively you can first use <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="{{site.baseurl}}/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="3%"/></a> before applying <a href="create_tb.html">Create Topo- /Bathymetry</a>.
 
 <p>For marine basins, the same applies keeping preexisting depths that are deeper than the maximum set depth. It you do not want to keep preexisting depths, they can be initially deleted with the tool<a href="remove_arts.html">Remove Artefacts<img src="{{site.baseurl}}/assets/images/icon_remove_arts.png" alt="icon_remove artefacts" width="3%"/></a> or by setting values to H=0 using the tool <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="{{site.baseurl}}/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="3%"/></a>.
 <p>In addition, a special feature has been implemented to enable connecting to preexisting oceans and seas. The created marine basin will most often connect to a preexisting ocean or sea. In this case the algorithm checks if the raster beneath the polygon of the marine area being created has bathymetry values (H &lt 0). If it has, the initial value of the overlapping areas connecting the 2 basins will be used and the new marine areas will be adjusted accordingly.</p>
+-->
 
 <b>Examples:</b>
 <p><br></p>
