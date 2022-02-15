@@ -1,6 +1,9 @@
 ---
 layout: tool
 title: Remove Artefacts
+working: true
+versioning: true
+version: Version 1.1
 ---
 <html>
     <head>
@@ -14,6 +17,9 @@ working: false -->
         <div class="icon-container">
                     <img width="10%" src="{{site.baseurl}}/assets/images/icon_remove_arts.png"
                     alt="Icon remove artefacts"></div>
+        
+        <p style="text-align:right"> <i><a href= "remove_arts_v1.0.html">Version 1.0</a></i></p>
+        
         <p>Artefacts can be inherited from the input data sources or introduced to the map during the raster processing within the framework of Terra Antiqua. For example, filling gaps by interpolation can cause some abnormally high or low values that need to be removed.
         <p>Remove Artefacts is designed to remove the artefacts present in the data or introduced during different processing steps from the DEM raster. A big advantage of this tool is that polygons are drawn by the user to specify the area where artefacts will be removed. If needed, more polygons can be drawn.
         <div class="technical-details">
@@ -60,13 +66,20 @@ working: false -->
                        alt="remove artefacts 2 polygons"></div>
                        </li>
                    
+                   <h3 style="text-align:center"><b>Advanced Parameters</b></h3>
+                   
+                   <li><p>If you want to save the polygons you draw in this tool, you can check the box <b><i>save mask layer</i></b>. You can choose whether to <b><i>add the layer to the map canvas</i></b> or not.<br>
+                       If you choose to do so, you can specify the output file path for the shapefile.
+                       </p></li>
                     <li>
                    <p> Choose the <b><i>Output file path</b></i>, and click Run.</p></li></ol>
+            
+            
             <div class="warning">
                 <div1 class= "icon-container">
                     <img class="warning-tip-icon" src="{{site.baseurl}}/assets/images/icon_warning.png"
                     alt="warning">
-                   <p> The polygons you draw here are temporary and will be erased once the processing is done.</p>
+                   <p> The polygons you draw here are temporary and will be erased once the processing is done, unless specified otherwise (see step 6).</p>
             </div>
             <div class="warning">
                 
