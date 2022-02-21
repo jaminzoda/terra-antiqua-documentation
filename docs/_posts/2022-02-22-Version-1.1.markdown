@@ -1,29 +1,28 @@
 ---
 layout: post
 title:  "Version 1.1: New functionality"
-date:   2022-02-22 11:00:00 -0800
+date:   2022-02-21 12:15:00 -0800
 categories: Versions
 ---
 
-We present a <b>new version 1.1 of Terra Antiqua</b>. 
+#Today we present a **new version 1.1 of Terra Antiqua. 
 
-<!-- It's <b>a series of four videos</b> going over the plugin functionalities and showing how to make a full paleoreconstruction.
-The tutorial is based on the workshops we offered this year and uses the Sample Data Bundle (see tab above) to reconstruct the past geography at 30 Ma.
-
----
-
-Today, the first video is available on Youtube.
-
----
-##Content:
-
-What is Terra Antiqua and how does in works?
-How to download and install Terra Antiqua
-A brief description of the interface and the icons
-The User Manual
-The Sample Data Bundle to make a full reconstruction at 30 Ma
+This includes bug fixes, a revision of all the texts in the plugin and the manual to make them more clear, and...
+**New functions for 40% of the tools!
 
 ---
 
-#Terra Antiqua Tutotial: <a href="https://youtu.be/SWs4QvLmrlc">Video 1 - Introduction</a>
+Version 1.1 is available for download from the QGIS plugin library.
+Follow the indications given in the homepage to download the plugin.
+If you already have a previous version, just go to the plugin manager on QGIS and click *upgrade.
 
+
+---
+
+The changelog is available in the plugin manager as part of the plugin metadata.
+
+---
+
+We would like to thank all the users who gave us very useful feedback and please keep using Terra Antiqua and giving us feedback.
+
+##Thank you!

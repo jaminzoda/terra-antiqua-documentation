@@ -13,7 +13,7 @@ The tutorial is based on the workshops we offered this year and uses the Sample 
 Today, the first video is available on Youtube.
 
 ---
-##Content:
+Content:
 
 What is Terra Antiqua and how does in works?
 How to download and install Terra Antiqua
@@ -23,5 +23,5 @@ The Sample Data Bundle to make a full reconstruction at 30 Ma
 
 ---
 
-#Terra Antiqua Tutotial: <a href="https://youtu.be/SWs4QvLmrlc">Video 1 - Introduction</a>
+Terra Antiqua Tutotial: <a href="https://youtu.be/SWs4QvLmrlc">Video 1 - Introduction</a>
 
