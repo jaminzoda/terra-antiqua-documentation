@@ -14,7 +14,7 @@ This includes bug fixes, a revision of all the texts in the plugin and the manua
 
 Version 1.1 is available for download from the QGIS plugin library.
 Follow the indications given in the homepage to download the plugin.
-If you already have a previous version, just go to the plugin manager on QGIS and click *upgrade.
+If you already have a previous version, just go to the plugin manager on QGIS and click <i>upgrade</i>.
 
 
 ---
