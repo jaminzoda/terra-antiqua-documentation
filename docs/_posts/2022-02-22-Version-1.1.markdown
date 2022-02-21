@@ -5,10 +5,10 @@ date:   2022-02-21 12:15:00 -0800
 categories: Versions
 ---
 
-#Today we present a **new version 1.1 of Terra Antiqua. 
+Today we present a <b>new version 1.1 of Terra Antiqua</b>. 
 
 This includes bug fixes, a revision of all the texts in the plugin and the manual to make them more clear, and...
-**New functions for 40% of the tools!
+<b>New functions for 40% of the tools!</b>
 
 ---
 
@@ -25,4 +25,4 @@ The changelog is available in the plugin manager as part of the plugin metadata.
 
 We would like to thank all the users who gave us very useful feedback and please keep using Terra Antiqua and giving us feedback.
 
-##Thank you!
+<b>Thank you!</b>
