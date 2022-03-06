@@ -7,6 +7,8 @@ categories: Tutorial
 
 <b>We present a new tutorial on Terra Antiqua.</b>
 
+<img src="{{site.baseurl}}/assets/images/ad_for_facebook.png" alt="Tutorials_image" width="70%"/>
+
  It’s a <b>series of 4 videos</b> going over the plugin functionalities and showing how to make a full paleoreconstruction. The tutorial is based on <a href="https://docs.google.com/document/d/10zRGOljvevSipeq9QPxiNGF1wSqRAuOjpTrNbsRpAdo/edit?usp=sharing">the workshops we offered in 2021</a> and uses the <a href="sample_data.html">Sample Data Bundle</a> to reconstruct the past geography at 30 Ma.
  
 ---
