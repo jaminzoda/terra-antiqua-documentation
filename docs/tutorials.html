@@ -21,7 +21,10 @@ working: true
 <h2> Content of the tutorial</h2>
 
 <p>This tutorial is based on <a href:"">this</a> hands-on exercise.</p>
-
+<div class="tip">
+        <p>These tutorials do not intend to replace the step-by-step indications from this manual. They provide an overvieuw of the plugin functionality and the workflow but you should still <b>visit the page dedicated to the tool you want to use and follow step-by-step indications </b>. <a href="https://jaminzoda.github.io/terra-antiqua-documentation/">You will find all the links in the homepage</a>. They contain much more detailed information and cover more advanced uses that these videos.<br>
+            Moreover, these videos have been made with Terra Antiqua 1.0 which is not the latest  available version. With each update we add new exciting funtionality to our plugin including some advanced parameters that cannot be seen in the videos.
+        </p></div>
 
 <table>
     <tr>
@@ -55,17 +58,37 @@ working: true
             The next step before concentrating on target regions is to set the paleo-shorelines. These need to be first drawn as polygons. The perimeter of these polygons will be the shoreline.
                 <a href="set_pls.html">Set Paleoshorelines<img src="{{site.baseurl}}/assets/images/icon_set_pls.png" alt="icon_set_paleoshorelines" width="10%"/></a></td>
         
-        <td><ul><li> <a href="compile_tb.html">Compile  Topo- /Bathymetry<img src="{{site.baseurl}}/assets/images/icon_compile_tb.png" alt="icon_compile_tb" width="9%"></a></li>
-            <li><a href="isostat_cp.html">Isostatic Compensation<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></li>
-            <li><a href="copy_paste.html">Copy / Paste Raster<img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></li>
-            <li><a href="set_pls.html">Set Paleoshorelines<img src="{{site.baseurl}}/assets/images/icon_set_pls.png" alt="icon_set_paleoshorelines" width="10%"/></a></li>
+        <td><ul><li> <a href="compile_tb.html">Compile  Topo- /Bathymetry<br>
+            <img src="{{site.baseurl}}/assets/images/icon_compile_tb.png" alt="icon_compile_tb" width="9%"></a></li>
+            
+            <li><a href="isostat_cp.html">Isostatic Compensation<br>
+                <img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></a></li>
+            
+            <li><a href="copy_paste.html">Copy / Paste Raster<br>
+            <img src="{{site.baseurl}}/assets/images/icon_std_proc.png" alt="icon_standard_processing" width="10%"/></li>
+            
+            <li><a href="set_pls.html">Set Paleoshorelines<br>
+                <img src="{{site.baseurl}}/assets/images/icon_set_pls.png" alt="icon_set_paleoshorelines" width="10%"/></a></li>
         </td>
         
     </tr>
     <tr>
         <td>Video 3/4 - Main Reconstruction (part 2)</td>
-            <td></td>
-            <td></td>
+            <td><ol><li>This part shows the reconstruction of the topography by rescaling the elevation of target regions linearly. Here we are using this tool twice:<br>
+                <ul><li>First to rescale continental scale areas,</li>
+                    <li>then to rescale smaller regions within those continents.</li></ul><br>
+                <a href="modify_tb.html">Modify Topo- /Bathymetry<img src="{{site.baseurl}}/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="10%"/></a></li>
+                <li><p>Create topography / bathymetry from scratch for regions that are too different.<br>
+                    When the geography you are reconstructing is too different from the present-day features, this part shows how to create new topography or bathymetry from scratch instead of rescaling present-day values.</p>
+                   <p> We use some regions as examples: Andes, Ethiopia, and Tibet</p>
+                    <p><a href="create_tb.html">Create Topo- /Bathymetry<img src="{{site.baseurl}}/assets/images/icon_create_tb.png" alt="icon_create_tb" width="10%"/></a></p>                    </li>
+            </td>
+            <td><ul>
+                <li><a href="modify_tb.html">Modify Topo- /Bathymetry<br>
+                    <img src="{{site.baseurl}}/assets/images/icon_modify_tb.png" alt="icon_modify_tb" width="10%"/></a></li>
+                <li><a href="create_tb.html">Create Topo- /Bathymetry<br>
+                    <img src="{{site.baseurl}}/assets/images/icon_create_tb.png" alt="icon_create_tb" width="10%"/></a></li>
+            </ul></td>
             
         </tr>
     <tr>
@@ -80,10 +103,7 @@ working: true
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVMwZejaIcYPrBUvKigDmyTp97DKZlP61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<div class="tip">
-        <p>These tutorials do not intend to replace the step-by-step indications from this manual. They provide an overvieuw of the plugin functionality and the workflow but you should still <b>visit the page dedicated to the tool you want to use and follow step-by-step indications </b>. <a href="https://jaminzoda.github.io/terra-antiqua-documentation/">You will find all the links in the homepage</a>. They contain much more detailed information and cover more advanced uses that these videos.<br>
-            Moreover, these videos have been made with Terra Antiqua 1.0 which is not the latest  available version. With each update we add new exciting funtionality to our plugin including some advanced parameters that cannot be seen in the videos.
-        </p></div>
+
 <!--
     <p><br></p>
     <h2> <section id="contributions">Contributions</section></h2> <a href="https://github.com/jaminzoda/terra-antiqua" > <img style="width:15%" src="{{site.baseurl}}/assets/images/GitHub_Logo.png"
