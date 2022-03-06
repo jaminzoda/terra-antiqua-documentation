@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "New tutorial videos"
-date:   2022-03-05 18:00:00 -0800
+date:   2022-03-07 23:00:00 -0800
 categories: Tutorial
 ---
 
