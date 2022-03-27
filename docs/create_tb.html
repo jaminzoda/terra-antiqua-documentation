@@ -35,8 +35,8 @@ working: false -->
 <li><p>Finally, the entire area of the feature is interpolated to create a continuous elevation/depth values pattern.</p></li>
 </ol>
     </div>
-           
-<p>Most features made with this tool (such as inland seas and mountain ranges) will be closed/symmetrical (e.g.: an inland sea will be completely encircled with a shoreline) because the algorithm treats each pixel at the edge of the polygon equally.
+          
+<p><section id="keep-preexisting-TB">Most features made with this tool (such as inland seas and mountain ranges) will be closed/symmetrical (e.g.: an inland sea will be completely encircled with a shoreline) because the algorithm treats each pixel at the edge of the polygon equally. </section> 
 
 <p>By default, all preexisting values will be erased before created the new feature. However, there is an option (see <a href="create_tb.html#keep-preexisting">step 6</a> below) to take into account these values if they are higher than the <i>mountain range</i> created or lower than the <i>sea</i> created.
 <br/>This allows you to create features that are connected to existing ocean basins or mountain ranges, in a way that looks more realistic.
@@ -123,7 +123,9 @@ working: false -->
                        alt="Checkbox to keep higher topography"><br/>
                    <img style="width:30%" src="{{site.baseurl}}/assets/images/keep_deeper_bathy.png"
                            alt="Checkbox to keep deeper bathymetry">
-                           <p><i>This is recommended if the features created are connected to existing mountains or oceans</i>
+                           <p><i>This is recommended if the features created are connected to existing mountains or oceans.</i><br>
+                               <a href="create_tb.html#keep-preexisting-TB">See explanation above.</a>
+                         
                </li>
                 <li>
                <p> Choose the <b><i>Output file path</b></i>, and click Run.</li>
