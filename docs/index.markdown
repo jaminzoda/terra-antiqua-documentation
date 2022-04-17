@@ -62,7 +62,7 @@ This homepage contains the index of the manual and general information about dow
         </div></li>
     </ul>
 </div>
-At the end of each page, you will find a text filed where you can comment on the tools, suggest any modification, share ideas, etc... **Your feedback is most welcome**!!
+At the end of each page, you will find a link to the GitHub discussions where you can comment on the tools, suggest any modification, share ideas, etc... **Your feedback is most welcome**!!
 <p>You may also use <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7r0Uhl2aauYCyBNpMgFrtRfP8oIJtjL_e5S1t7NHKmP15sA/viewform?usp=sf_link"><b>this contact form</b></a>.</p>
 ---
 ## Compatibility: QGIS 3.10 or higher
