@@ -13,7 +13,7 @@ title: Index
 
 This homepage contains the index of the manual and general information about downloading and installing the plugin.
 
-### **The section  *Posts* at the bottom shows the latest events regarding Terra Antiqua.**
+### **The *Post* section at the bottom shows the latest events regarding Terra Antiqua.**
 
 
 --- 
