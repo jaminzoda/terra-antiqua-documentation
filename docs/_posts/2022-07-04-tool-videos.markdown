@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New Step-by-Step Videos for Primary and Secondar Tools"
+title:  "New Step-by-Step Videos for Primary and Secondary Tools"
 date:   2022-07-03 10:04:00 -0800
 categories: Videos
 ---
