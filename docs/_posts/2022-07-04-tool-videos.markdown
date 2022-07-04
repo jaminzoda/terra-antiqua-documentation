@@ -18,7 +18,7 @@ Today, all videos are available on Youtube and on the page for each of the tools
 ---
 
 To watch them you can go to <a href="https://www.youtube.com/channel/UCdYwTfKb0IoH2l0M5QsId6w">our Youtube channel</a>.
-The two playlists are embeded here and each individual video is at the begining of the corresponding page.
+The two playlists are embedded here and each individual video is at the begining of the corresponding page.
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVMwZejaIcYPE0mGNKyomvRTT9U-sfujV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVMwZejaIcYPxgSCKanaeVnbMtgfjlikz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
