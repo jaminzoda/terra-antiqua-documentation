@@ -5,7 +5,7 @@ date:   2022-07-03 10:04:00 -0800
 categories: Videos
 ---
 
-<b>We present a series of videos illistrating step-by-step indications to use Terra Antiqua.</b>
+<b>We present a series of videos illustrating step-by-step indications to use Terra Antiqua.</b>
 
 
 
