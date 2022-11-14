@@ -68,11 +68,6 @@ At the end of each page, you will find a link to the GitHub discussions where yo
 ## Compatibility: QGIS 3.10 or higher
 Terra Antiqua v1.0 and v1.1 have the same minimum technical requirements as QGIS 3.10 (Windows 7, 8, 8.1 or 10; Linux; MacOS High Sierra 10.13 or higher)
 
-Terra Antiqua v1.0 and v1.1 have been tested on:
-
-**OS**: Windows 10 (20H2), Mac OS Monterey 12.2, Linux Ubuntu (20.04) <br>
-**QGIS version**: 3.10.14 _A Coruña_
-
 ### **We always recommend to update QGIS to the latest _LTR_ version, and keep Terra Antiqua updated with the Plugin manager.**
 
 ---
