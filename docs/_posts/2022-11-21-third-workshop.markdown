@@ -3,14 +3,15 @@ layout: post
 title:  "Third workshop in November"
 date:   2022-11-21 14:00:00 -0700
 categories: Workshop
-
 ---
 
 
 Thank you all for your interest in Terra Antiqua. Our community is growing and we are having a third workshop to introduce our plugin to the new users. 
 If you already participated in any of the previous ones, this is not for you (it will be the exact same exercise).
-*However, stay tuned because there is a new version coming soon (Terra Antiqua v2.0) with some new exciting features and we will offer a new workshop for this once it is ready.*
-*If you are new, welcome! You are in the right place :)*
+However, stay tuned because there is a new version coming soon (Terra Antiqua v2.0) with some new exciting features and we will offer a new workshop for this once it is ready.
+
+**If you are new, welcome! You are in the right place :)**
+
 ---
 
 Here are the details:
