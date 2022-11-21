@@ -6,7 +6,7 @@ categories: Workshop
 ---
 
 
-Thank you all for your interest in Terra Antiqua. Our community is growing and we are having a third workshop to introduce our plugin to the new users. 
+Thank you all for your interest in Terra Antiqua. Our community is growing and we are having a third workshop to introduce our plugin (**version 1.1**) to the new users. 
 If you already participated in any of the previous ones, this is not for you (it will be the exact same exercise).
 However, stay tuned because there is a new version coming soon (Terra Antiqua v2.0) with some new exciting features and we will offer a new workshop for this once it is ready.
 
