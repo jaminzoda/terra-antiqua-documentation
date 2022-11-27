@@ -16,7 +16,12 @@ However, stay tuned because there is a new version coming soon (Terra Antiqua v2
 
 Here are the details:
 ### Monday Nov 28, 16:30 (UTC+1)
-*Zoom link available soon.*
+
+Zoom meeting details:
+
+Meeting ID: 886 3898 9468
+
+Passcode: 553329
 
 ---
 
